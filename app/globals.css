@@ -3,6 +3,14 @@
 
 @custom-variant dark (&:is(.dark *));
 
+@theme {
+  /* Setează Poppins ca font implicit (sans) folosind variabila --font-sans */
+  --font-sans: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
+
+  /* Definește noul font-family 'heading' care folosește Bebas Neue */
+  --font-heading: var(--font-heading), ui-sans-serif, system-ui, sans-serif;
+}
+
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -45,22 +53,27 @@
 
 :root {
   --radius: 0.625rem;
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.145 0 0);
+  --spacing-s: 8px;
+  --spacing-m: 16px;
+  --spacing-l: 2rem;
+  --background: oklch(0.98 0.01 270); /* culoare fundal */
+  --foreground: oklch(0.12 0.02 270); /* culoare text */
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.145 0 0);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.145 0 0);
   --primary: oklch(0.205 0 0);
   --primary-foreground: oklch(0.985 0 0);
-  --secondary: oklch(0.97 0 0);
-  --secondary-foreground: oklch(0.205 0 0);
+  --secondary: oklch(0.22 0.01 270); /* culoare secundara fundal */
+  --secondary-foreground: oklch(
+    26.448% 0.00003 271.152
+  ); /* culoare secundara text (la fel) */
   --muted: oklch(0.97 0 0);
   --muted-foreground: oklch(0.556 0 0);
-  --accent: oklch(0.97 0 0);
-  --accent-foreground: oklch(0.205 0 0);
+  --accent: oklch(0.62 0.28 275); /* accent primar */
+  --accent-foreground: oklch(0.66 0.25 290); /* accent secundar */
   --destructive: oklch(0.577 0.245 27.325);
-  --border: oklch(0.922 0 0);
+  --border: oklch(0.75 0.02 270); /* culoare bordura */
   --input: oklch(0.922 0 0);
   --ring: oklch(0.708 0 0);
   --chart-1: oklch(0.646 0.222 41.116);
