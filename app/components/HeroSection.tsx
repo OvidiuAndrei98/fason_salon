@@ -1,11 +1,38 @@
 import Image from "next/image";
 import HeroImage from "@/public/hero_image.webp";
+import HeroSplash from "@/public/splash_hero.png";
 import { Button } from "@/components/ui/button";
 
 const HeroSection = () => {
   return (
-    <div className="relative flex flex-col h-[calc(100vh-56px)] p-[var(--spacing-s)]">
-      <div className="flex flex-col">
+    <div className="relative flex flex-col h-[calc(100vh-56px)] p-[var(--spacing-s)] ">
+      <div
+        className="
+    absolute top-[-100px] left-[-100px] 
+    w-[300px] h-[300px] 
+    bg-accent opacity-20 
+    rounded-full z-0 
+    pointer-events-none 
+    transform rotate-45
+  "
+      />
+      <div
+        className="
+    absolute bottom-0 right-[-50px] 
+    w-[200px] h-[400px] 
+    bg-accent opacity-30 
+    z-0 pointer-events-none 
+    transform skew-y-12
+  "
+      />
+      <Image
+        src={HeroSplash}
+        alt="Christina Gramma"
+        className="absolute bottom-0 left-[-100px] 
+
+    opacity-70 z-1"
+      />
+      <div className="flex flex-col z-10">
         <h1 className=" font-heading text-secondary-foreground pt-[16px] font-bold text-[clamp(2rem,_15vw,_10rem)] uppercase leading-none tracking-wide m-0 p-0 text-nowrap">
           CHRISTINA GRAMMA
         </h1>
@@ -13,22 +40,25 @@ const HeroSection = () => {
           ARTE împletite în PĂR
         </h2>
       </div>
-
-      <Image
-        className="absolute top-[7%] mx-auto left-[50%] translate-x-[-50%] w-[100vw] max-w-[700px] h-auto"
-        src={HeroImage}
-        alt="hero-image"
-      />
-      <div className="w-full h-[45%] px-4 flex flex-col mt-auto relative justify-end gap-[var(--spacing-l)] pb-4">
-        <div className="absolute top-[-70px] left-0 w-full h-[80px] bg-gradient-to-t from-background via-background to-transparent" />
-        <Button className="h-[80px] self-center text-xl bg-foreground text-background hover:bg-accent active:bg-accent hover:text-secondary-background">
-          Explore My Book
-        </Button>
-        <span className="text-center text-xl text-secondary-foreground order-first">
-          Styling-ul, pentru mine, este arta de a modela frumusețea interioară.
-          Creez imagini prin culoare și tunsoare. Cartea mea împărtășește
-          viziunea din spatele fiecărei transformări.
-        </span>
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center z-10">
+        <div className="relative w-full flex justify-center items-center lg:col-span-8">
+          <div className="relative w-full">
+            <Image
+              src={HeroImage}
+              alt="Christina Gramma"
+              className="max-w-[800px] w-full mt-[-50px] sm:mt-[-80px] md:mt-[-100px] z-10"
+            />
+          </div>
+        </div>
+        <div className="flex flex-col gap-6 mb-[32px] lg:col-span-4">
+          <span className="text-center md:text-start text-xl text-secondary-foreground order-first">
+            Styling-ul e arta de a modela frumusețea interioară. Creez imagini
+            prin culoare și tunsoare. Viziunea mea, acum și în carte.
+          </span>
+          <Button className="p-8 rounded self-center md:self-start text-xl bg-foreground text-background hover:bg-accent active:bg-accent hover:text-secondary-background">
+            Explore My Book
+          </Button>
+        </div>
       </div>
     </div>
   );
