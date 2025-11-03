@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 
 const HeroSection = () => {
   return (
-    <div className="relative flex flex-col h-[calc(100vh-56px)] p-[var(--spacing-s)] ">
+    <div className="relative flex flex-col h-[calc(100vh-56px)] p-[var(--spacing-s)] max-w-[1024px] mx-auto ">
       <div
         className="
     absolute top-[-100px] left-[-100px] 
