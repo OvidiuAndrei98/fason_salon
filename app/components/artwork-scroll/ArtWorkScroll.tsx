@@ -35,10 +35,13 @@ export default function Scene() {
 
   return (
     <div ref={component}>
-      <div className="h-screen flex items-start justify-center">
+      <div className="h-full flex items-start justify-center relative">
         <AboutMe />
       </div>
-      <div ref={slider} className="w-[600vw] h-screen flex flex-wrap">
+      <div
+        ref={slider}
+        className="w-[600vw] h-screen flex flex-wrap relative overflow-hidden"
+      >
         <div className="w-screen h-screen panel flex items-start justify-center">
           <BookSection />
         </div>
