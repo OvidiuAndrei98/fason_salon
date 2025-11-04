@@ -1,4 +1,5 @@
 import AboutMe from "./components/AboutMe";
+import ArtWorkScroll from "./components/artwork-scroll/ArtWorkScroll";
 import BookSection from "./components/BookSection";
 import HeroSection from "./components/HeroSection";
 
@@ -17,6 +18,7 @@ export default function Home() {
       </nav>
       <HeroSection />
       <AboutMe />
+      <ArtWorkScroll />
       <BookSection />
     </div>
   );
