@@ -1,3 +1,4 @@
+import AboutMe from "./components/AboutMe";
 import BookSection from "./components/BookSection";
 import HeroSection from "./components/HeroSection";
 
@@ -15,6 +16,7 @@ export default function Home() {
         </div>
       </nav>
       <HeroSection />
+      <AboutMe />
       <BookSection />
     </div>
   );
