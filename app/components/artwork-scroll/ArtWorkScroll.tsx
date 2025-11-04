@@ -42,7 +42,7 @@ export default function Scene() {
         ref={slider}
         className="w-[600vw] h-screen flex flex-wrap relative overflow-hidden"
       >
-        <div className="w-screen h-screen panel flex items-start justify-center">
+        <div className="w-screen h-screen panel flex items-center justify-center">
           <BookSection />
         </div>
         <div className="w-screen h-screen panel bg-[url('/image22.jpeg')] bg-no-repeat bg-center bg-cover">
