@@ -3,6 +3,8 @@
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import { useEffect, useRef } from "react";
+import AboutMe from "../AboutMe";
+import BookSection from "../BookSection";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -14,7 +16,6 @@ export default function Scene() {
 
   useEffect(() => {
     let panels = gsap.utils.toArray(".panel");
-    const pixelsPause = 300;
     gsap.to(panels, {
       xPercent: -100 * (panels.length - 1),
       ease: "none",
@@ -34,20 +35,16 @@ export default function Scene() {
 
   return (
     <div ref={component}>
-      <div className="flex flex-col justify-center items-center h-screen bg-yellow-400">
-        <h1>Testing horizontal scrolling w/ three sections</h1>
-        <h2>First Container</h2>
+      <div className="h-screen flex items-start justify-center">
+        <AboutMe />
       </div>
       <div ref={slider} className="w-[600vw] h-screen flex flex-wrap">
-        <div className="w-screen h-screen panel bg-blue-600">
-          <div>
-            SCROLL DOWN
-            <div className="scroll-down">
-              <div className="arrow"></div>
-            </div>
-          </div>
+        <div className="w-screen h-screen panel flex items-start justify-center">
+          <BookSection />
         </div>
-        <div className="w-screen h-screen panel bg-red-600">ONE</div>
+        <div className="w-screen h-screen panel bg-[url('/image22.jpeg')] bg-no-repeat bg-center bg-cover">
+          ONE
+        </div>
         <div className="w-screen h-screen panel bg-orange-500">TWO</div>
         <div className="w-screen h-screen panel bg-purple-600">THREE</div>
       </div>

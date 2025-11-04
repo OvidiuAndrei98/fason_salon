@@ -3,8 +3,8 @@ import Carte from "@/public/carte.png";
 import Image from "next/image";
 const BookSection = () => {
   return (
-    <div className="w-full flex flex-col items-center max-w-[1024px]">
-      <h2 className="font-heading text-4xl py-[50px] font-extrabold tracking-wide bg-gradient-to-r from-slate-700 via-gray-500 to-slate-700 bg-clip-text text-transparent">
+    <div className="w-full flex flex-col items-center max-w-[1024px] px-[var(--spacing-s)]">
+      <h2 className="font-heading text-3xl md:text-4xl py-[30px] md:py-[50px] font-extrabold tracking-wide bg-gradient-to-r from-slate-700 via-gray-500 to-slate-700 bg-clip-text text-transparent">
         DESPRE CARTE
       </h2>
       <div className="w-full grid md:grid-cols-2 md:grid-rows-1 gap-[50px] sm:gap-4 md:gap-4 lg-gap-4 ">

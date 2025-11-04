@@ -5,7 +5,7 @@ import HeroSection from "./components/HeroSection";
 
 export default function Home() {
   return (
-    <div className="flex flex-col min-h-screen items-center m-[0_auto]  bg-background font-sans dark:bg-black overflow-x-hidden">
+    <div className="overflow-x-hidden w-full">
       <nav className="flex justify-center w-full px-8">
         <div className="flex  justify-between w-full  py-4">
           <p className="font-sans text-secondary-foreground">LOGO</p>
@@ -17,9 +17,7 @@ export default function Home() {
         </div>
       </nav>
       <HeroSection />
-      <AboutMe />
       <ArtWorkScroll />
-      <BookSection />
     </div>
   );
 }
