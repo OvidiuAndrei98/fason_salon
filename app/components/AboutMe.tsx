@@ -5,7 +5,7 @@ const AboutMe = () => {
         Viziunea Mea
       </h2>
       <div className="w-full flex flex-col items-center gap-4">
-        <div className="h-[150px] w-[150px] md:h-[250px] md:w-[250px] bg-blue-800 rounded-full"></div>
+        <div className="h-[150px] w-[150px] md:h-[250px] md:w-[250px] bg-[url('/image16.jpeg')] bg-cover rounded-full"></div>
         <h3 className="text-secondary-foreground font-heading text-2xl font-extrabold tracking-wide">
           Christina Gramma
         </h3>
