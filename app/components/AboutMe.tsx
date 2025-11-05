@@ -27,10 +27,10 @@ const AboutMe = () => {
           </li>
         </ul>
       </div>
-      <div className="grid grid-cols-1 grid-rows-[100px_1fr] md:grid-rows-1 md:grid-cols-2 gap-4 w-full mt-4 md:mt-8 mb-16">
+      <div className="grid grid-cols-1 grid-rows-[300px_1fr] md:grid-rows-1 md:grid-cols-2 gap-4 w-full mt-4 md:mt-8 mb-16">
         <div className="bg-[url('/image23.jpeg')] bg-cover rounded-lg relative before:rounded-lg before:absolute before:inset-0 before:bg-gradient-to-l before:from-black/50 before:to-black/5"></div>
         <div className="flex flex-col justify-top gap-6">
-          <blockquote className="relative border-t-4 border-r-0 md:border-t-0 md:border-r-4 border-accent pr-6 text-right">
+          <blockquote className="relative border-t-4 border-r-0 md:border-t-0 md:border-r-4 border-accent pt-6 md:pr-6 md:pt-0 text-center md:text-right">
             <p className="text-md md:text-lg text-muted-foreground leading-relaxed">
               Cu o experiență de peste 10 ani în domeniul hair styling-ului,
               sunt dedicată să creez look-uri care să reflecte personalitatea
