@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Bebas_Neue, Poppins } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
+import DesktopNav from "./components/navigation/DesktopNav";
+import Footer from "./components/navigation/Footer";
 
 const fontSans = Poppins({
   subsets: ["latin"],
@@ -34,7 +36,9 @@ export default function RootLayout({
           fontHeading.variable
         )}
       >
+        <DesktopNav />
         {children}
+        <Footer />
       </body>
     </html>
   );

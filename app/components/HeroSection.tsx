@@ -6,7 +6,6 @@ import { Button } from "@/components/ui/button";
 const HeroSection = () => {
   return (
     <div className="relative flex flex-col h-[calc(100vh-56px)] p-[var(--spacing-s)] hero-section max-w-[1024px] mx-auto">
-      <div className="absolute top-[-100px] left-[-100px] w-[300px] h-[300px] bg-accent opacity-20 rounded-full z-0 pointer-events-none transform rotate-45" />
       <div className="absolute bottom-0 right-[-50px] w-[200px] h-[400px] bg-accent opacity-30 z-0 pointer-events-none transform skew-y-12" />
       {/* <Image
         src={HeroSplash}
