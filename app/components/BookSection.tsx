@@ -66,7 +66,7 @@ const BookSection = () => {
               toți cei care cred că frumusețea se creează, nu se imită.
             </p>
 
-            <p className="text-md md:text-lg text-muted-foreground leading-relaxed">
+            <p className="text-md md:text-lg text-muted-foreground leading-relaxed font-sans">
               Părul nu e doar materie — e poveste, culoare și mișcare. „Arte
               împletite în păr" nu se citește, se trăiește. Platforma reunește
               cunoștințe, tehnici și viziuni din arta hairstylingului, într-o
@@ -89,10 +89,10 @@ const BookSection = () => {
           CE VEI INVATA
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 relative">
-          <div className="absolute inset-0 bg-[url('/splash_hero.png')] bg-cover bg-center bg-no-repeat opacity-10 rounded-lg md:h-[170%] z-[1] md:-top-[70px]"></div>
+          <div className="absolute inset-0 bg-[url('/splash_hero.png')] bg-cover bg-center bg-no-repeat opacity-10 rounded-lg md:h-[170%] -z-[1] md:-top-[70px]"></div>
 
-          <div className="relative z-10 bg-gradient-to-br from-accent/10 to-accent/5 p-6 rounded-lg shadow-md border border-accent/20 backdrop-blur-sm">
-            <h3 className="text-xl font-semibold mb-3 text-secondary-foreground">
+          <div className="relative z-10 bg-gradient-to-br from-accent/10 to-accent/5 p-6 rounded-lg shadow-md border border-accent/20 backdrop-blur-sm hover:bg-accent/5 transition-colors">
+            <h3 className="text-xl font-semibold mb-3 text-secondary-foreground font-sans">
               Tehnici de Tuns
             </h3>
             <p className="text-muted-foreground">
@@ -101,8 +101,8 @@ const BookSection = () => {
             </p>
           </div>
 
-          <div className="relative z-10 bg-gradient-to-br from-accent/10 to-accent/5 p-6 rounded-lg shadow-md border border-accent/20 backdrop-blur-sm">
-            <h3 className="text-xl font-semibold mb-3 text-secondary-foreground">
+          <div className="relative z-10 bg-gradient-to-br from-accent/10 to-accent/5 p-6 rounded-lg shadow-md border border-accent/20 backdrop-blur-sm hover:bg-accent/5 transition-colors">
+            <h3 className="text-xl font-semibold mb-3 text-secondary-foreground font-sans">
               Colorare Profesională
             </h3>
             <p className="text-muted-foreground">
@@ -111,8 +111,8 @@ const BookSection = () => {
             </p>
           </div>
 
-          <div className="relative z-10 bg-gradient-to-br from-accent/10 to-accent/5 p-6 rounded-lg shadow-md border border-accent/20 backdrop-blur-sm">
-            <h3 className="text-xl font-semibold mb-3 text-secondary-foreground">
+          <div className="relative z-10 bg-gradient-to-br from-accent/10 to-accent/5 p-6 rounded-lg shadow-md border border-accent/20 backdrop-blur-sm hover:bg-accent/5 transition-colors">
+            <h3 className="text-xl font-semibold mb-3 text-secondary-foreground font-sans">
               Coafuri Elaborate
             </h3>
             <p className="text-muted-foreground">
@@ -120,8 +120,8 @@ const BookSection = () => {
             </p>
           </div>
 
-          <div className="relative z-10 bg-gradient-to-br from-accent/10 to-accent/5 p-6 rounded-lg shadow-md border border-accent/20 backdrop-blur-sm">
-            <h3 className="text-xl font-semibold mb-3 text-secondary-foreground">
+          <div className="relative z-10 bg-gradient-to-br from-accent/10 to-accent/5 p-6 rounded-lg shadow-md border border-accent/20 backdrop-blur-sm hover:bg-accent/5 transition-colors">
+            <h3 className="text-xl font-semibold mb-3 text-secondary-foreground font-sans">
               Armonia Estetică
             </h3>
             <p className="text-muted-foreground">
@@ -129,8 +129,8 @@ const BookSection = () => {
             </p>
           </div>
 
-          <div className="relative z-10 bg-gradient-to-br from-accent/10 to-accent/5 p-6 rounded-lg shadow-md border border-accent/20 backdrop-blur-sm">
-            <h3 className="text-xl font-semibold mb-3 text-secondary-foreground">
+          <div className="relative z-10 bg-gradient-to-br from-accent/10 to-accent/5 p-6 rounded-lg shadow-md border border-accent/20 backdrop-blur-sm hover:bg-accent/5 transition-colors">
+            <h3 className="text-xl font-semibold mb-3 text-secondary-foreground font-sans">
               Psihologia Frumuseții
             </h3>
             <p className="text-muted-foreground">
@@ -138,8 +138,8 @@ const BookSection = () => {
             </p>
           </div>
 
-          <div className="relative z-10 bg-gradient-to-br from-accent/10 to-accent/5 p-6 rounded-lg shadow-md border border-accent/20 backdrop-blur-sm">
-            <h3 className="text-xl font-semibold mb-3 text-secondary-foreground">
+          <div className="relative z-10 bg-gradient-to-br from-accent/10 to-accent/5 p-6 rounded-lg shadow-md border border-accent/20 backdrop-blur-sm hover:bg-accent/5 transition-colors">
+            <h3 className="text-xl font-semibold mb-3 text-secondary-foreground font-sans">
               Business în Hairstyling
             </h3>
             <p className="text-muted-foreground">
@@ -160,7 +160,7 @@ const BookSection = () => {
                   <span className="text-2xl font-bold text-accent mr-3">
                     01
                   </span>
-                  <h3 className="text-lg font-semibold text-secondary-foreground">
+                  <h3 className="text-lg font-semibold text-secondary-foreground font-sans">
                     Fzionomiile Părului
                   </h3>
                 </div>
@@ -196,10 +196,10 @@ const BookSection = () => {
             <details className="group">
               <summary className="flex items-center justify-between p-6 cursor-pointer hover:bg-accent/5 transition-colors h-[60px]">
                 <div className="flex items-center">
-                  <span className="text-2xl font-bold text-accent mr-3">
+                  <span className="text-2xl font-bold text-accent mr-3 ">
                     02
                   </span>
-                  <h3 className="text-lg font-semibold text-secondary-foreground">
+                  <h3 className="text-lg font-semibold text-secondary-foreground font-sans">
                     Comunicare
                   </h3>
                 </div>
@@ -238,7 +238,7 @@ const BookSection = () => {
                   <span className="text-2xl font-bold text-accent mr-3">
                     03
                   </span>
-                  <h3 className="text-lg font-semibold text-secondary-foreground">
+                  <h3 className="text-lg font-semibold text-secondary-foreground font-sans">
                     Arta si forma
                   </h3>
                 </div>
@@ -276,7 +276,7 @@ const BookSection = () => {
                   <span className="text-2xl font-bold text-accent mr-3">
                     04
                   </span>
-                  <h3 className="text-lg font-semibold text-secondary-foreground">
+                  <h3 className="text-lg font-semibold text-secondary-foreground font-sans">
                     Arta si culoare
                   </h3>
                 </div>
@@ -315,7 +315,7 @@ const BookSection = () => {
                   <span className="text-2xl font-bold text-accent mr-3">
                     05
                   </span>
-                  <h3 className="text-lg font-semibold text-secondary-foreground">
+                  <h3 className="text-lg font-semibold text-secondary-foreground font-sans">
                     Decoloratul
                   </h3>
                 </div>
@@ -353,7 +353,7 @@ const BookSection = () => {
                   <span className="text-2xl font-bold text-accent mr-3">
                     06
                   </span>
-                  <h3 className="text-lg font-semibold text-secondary-foreground">
+                  <h3 className="text-lg font-semibold text-secondary-foreground font-sans">
                     Arta si modelarea parului
                   </h3>
                 </div>
@@ -391,7 +391,7 @@ const BookSection = () => {
                   <span className="text-2xl font-bold text-accent mr-3">
                     07
                   </span>
-                  <h3 className="text-lg font-semibold text-secondary-foreground">
+                  <h3 className="text-lg font-semibold text-secondary-foreground font-sans">
                     Concepte
                   </h3>
                 </div>

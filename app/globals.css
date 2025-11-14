@@ -131,5 +131,18 @@
   }
   body {
     @apply bg-background text-foreground;
+    /* Use the injected Google variable for body text (all non-heading text) */
+    font-family: var(--font-sans);
+  }
+  /* Ensure headings keep the heading font (Bebas Neue) when available.
+     Also target the utility class `font-heading` used across components. */
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  .font-heading {
+    font-family: var(--font-heading);
   }
 }

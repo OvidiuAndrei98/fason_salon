@@ -1,6 +1,7 @@
 "use client";
 
 import PillNav from "@/components/pill-nav/PillNav";
+import { StaggeredMenu } from "@/components/pill-nav/StaggeredNav";
 import { useEffect, useState } from "react";
 
 const DesktopNav = () => {
@@ -31,7 +32,7 @@ const DesktopNav = () => {
         { label: "Contact", href: "/contact" },
       ]}
       activeHref="/"
-      className={`custom-nav sticky top-0 z-50 w-full max-w-[1024px] mx-auto`}
+      className={`custom-nav z-50 w-full max-w-[1024px] mx-auto`}
       ease="power2.easeOut"
       initialLoadAnimation={false}
       baseColor="#252525"

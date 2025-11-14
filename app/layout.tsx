@@ -7,14 +7,13 @@ import Footer from "./components/navigation/Footer";
 
 const fontSans = Poppins({
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"], // Alege greutățile necesare
+  weight: ["400", "500", "600", "700"],
   variable: "--font-sans",
 });
 
-// Bebas Neue pentru titluri (heading)
 const fontHeading = Bebas_Neue({
   subsets: ["latin"],
-  weight: "400", // Bebas Neue este de obicei doar 400 (Regular)
+  weight: "400",
   variable: "--font-heading",
 });
 export const metadata: Metadata = {

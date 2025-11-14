@@ -1,6 +1,4 @@
-"use client";
-
-import { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
 import Link from "next/link";
 
@@ -429,11 +427,21 @@ const PillNav: React.FC<PillNavProps> = ({
         >
           <span
             className="hamburger-line w-4 h-0.5 rounded origin-center transition-all duration-[10ms] ease-[cubic-bezier(0.25,0.1,0.25,1)]"
-            style={{ background: "var(--pill-bg, #fff)" }}
+            style={{
+              background: "var(--pill-bg, #fff)",
+              transform: isMobileMenuOpen
+                ? "rotate(45deg) translateY(3px)"
+                : "rotate(0deg) translateY(0)",
+            }}
           />
           <span
             className="hamburger-line w-4 h-0.5 rounded origin-center transition-all duration-[10ms] ease-[cubic-bezier(0.25,0.1,0.25,1)]"
-            style={{ background: "var(--pill-bg, #fff)" }}
+            style={{
+              background: "var(--pill-bg, #fff)",
+              transform: isMobileMenuOpen
+                ? "rotate(-45deg) translateY(-3px)"
+                : "rotate(0deg) translateY(0)",
+            }}
           />
         </button>
       </nav>
@@ -444,6 +452,10 @@ const PillNav: React.FC<PillNavProps> = ({
         style={{
           ...cssVars,
           background: "var(--base, #f0f0f0)",
+          // ensure initial render matches React state to avoid flash on mobile refresh
+          visibility: isMobileMenuOpen ? "visible" : "hidden",
+          opacity: isMobileMenuOpen ? 1 : 0,
+          pointerEvents: isMobileMenuOpen ? "auto" : "none",
         }}
       >
         <ul className="list-none m-0 p-[3px] flex flex-col gap-[3px]">
