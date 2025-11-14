@@ -18,7 +18,10 @@ const BookSection = () => {
             className="w-full md:max-w-sm mx-auto "
           />
         </div>
-        <div className="flex flex-col items-center justify-center gap-[var(--spacing-s)] md:gap-[var(--spacing-m)]">
+        <div
+          className="flex flex-col items-center justify-center gap-[var(--spacing-s)] md:gap-[var(--spacing-m)]"
+          style={{ background: "#5f67ff24", padding: 8, borderRadius: 32 }}
+        >
           <h2 className="text-secondary-foreground font-heading text-2xl font-extrabold tracking-wide">
             ARTE IMPLETITE IN PAR
           </h2>
@@ -37,11 +40,9 @@ const BookSection = () => {
               </span>
             </div>
           </div>
-          <div>
-            <span className="text-sm text-muted-foreground">
-              Cartea va fi livrata in format digital (PDF) prin email.
-            </span>
-          </div>
+          <span className="text-sm text-muted-foreground text-center">
+            Cartea va fi livrata in format digital (PDF) prin email.
+          </span>
           <Button
             className="p-7 rounded self-center text-xl bg-foreground text-background hover:bg-accent active:bg-accent hover:text-secondary-background"
             onClick={async () =>
