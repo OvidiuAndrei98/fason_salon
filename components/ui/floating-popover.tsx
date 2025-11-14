@@ -12,10 +12,10 @@ const FloatingPopover = () => {
       <Popover>
         <PopoverTrigger asChild>
           <Button
-            className="px-3 py-2 bg-foreground rounded shadow rounded-full"
+            className="p-2 bg-foreground rounded shadow-xl rounded-full hover:bg-accent active:bg-accent hover:text-secondary-background cursor-pointer"
             aria-label="Open cart"
           >
-            <ShoppingBasketIcon className="w-5 h-5" />
+            <ShoppingBasketIcon className="w-6 h-6" />
           </Button>
         </PopoverTrigger>
         <PopoverContent className="mr-6">
