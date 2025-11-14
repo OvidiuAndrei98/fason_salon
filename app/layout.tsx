@@ -4,6 +4,7 @@ import "./globals.css";
 import { cn } from "@/lib/utils";
 import DesktopNav from "./components/navigation/DesktopNav";
 import Footer from "./components/navigation/Footer";
+import FloatingPopover from "@/components/ui/floating-popover";
 
 const fontSans = Poppins({
   subsets: ["latin"],
@@ -38,6 +39,7 @@ export default function RootLayout({
         <DesktopNav />
         {children}
         <Footer />
+        <FloatingPopover />
       </body>
     </html>
   );
