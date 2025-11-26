@@ -7,6 +7,7 @@ import React, {
   useReducer,
   ReactNode,
 } from "react";
+import { toast } from "sonner";
 
 export type CartItem = {
   id: string;
@@ -41,6 +42,9 @@ function reducer(state: State, action: Action): State {
       const idx = state.items.findIndex((i) => i.id === item.id);
       if (idx >= 0) {
         const items = state.items.slice();
+        if (items[idx].quantity === 1) {
+          return state;
+        }
         items[idx] = {
           ...items[idx],
           quantity: items[idx].quantity + item.quantity,

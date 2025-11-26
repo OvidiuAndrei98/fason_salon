@@ -93,7 +93,7 @@ const FloatingPopover = () => {
                   </tfoot>
                 </table>
                 <Button
-                  className="p-7 rounded self-center bg-foreground text-background hover:bg-accent active:bg-accent hover:text-secondary-background"
+                  className="p-6 rounded self-center bg-foreground text-background hover:bg-accent active:bg-accent hover:text-secondary-background"
                   onClick={async () => {
                     await bookCheckout(
                       "price_1SQnRKK51mlAswumsjF5JEKH",

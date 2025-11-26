@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import Carte from "@/public/carte.png";
 import Image from "next/image";
 import { useCart } from "../core/cartContext";
+import { toast } from "sonner";
 const BookSection = () => {
   const cart = useCart();
   return (
@@ -71,13 +72,20 @@ const BookSection = () => {
           <Button
             className="p-7 rounded self-center text-xl bg-foreground text-background hover:bg-accent active:bg-accent hover:text-secondary-background"
             onClick={async () => {
-              cart?.addItem({
-                id: "book_001",
-                name: "Carte",
-                price: 149.99,
-                priceId: "price_1SQnRKK51mlAswumsjF5JEKH",
-                quantity: 1,
-              });
+              const isInCart = cart?.items.find(
+                (item) => item.id === "book_001"
+              );
+              if (!isInCart) {
+                cart?.addItem({
+                  id: "book_001",
+                  name: "Arte împletite în păr - Curs complet",
+                  price: 149.99,
+                  priceId: "price_1SXXbpK51mlAswumLSp0IRJI",
+                  quantity: 1,
+                });
+              } else {
+                toast.info("Produsul este deja în coș.");
+              }
             }}
           >
             Cumpară

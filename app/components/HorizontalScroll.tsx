@@ -4,12 +4,15 @@ import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import { useEffect, useRef } from "react";
 import Image from "next/image";
+import { Button } from "@/components/ui/button";
+import { useCart } from "../core/cartContext";
 
 gsap.registerPlugin(ScrollTrigger);
 
 export default function HorizontalScroll() {
   const component = useRef<HTMLDivElement>(null);
   const slider = useRef<HTMLDivElement>(null);
+  const cart = useCart();
 
   gsap.registerPlugin(ScrollTrigger);
 
@@ -83,12 +86,20 @@ export default function HorizontalScroll() {
                     </li>
                   </ul>
                   <div className="mt-6">
-                    <a
-                      href="/cumpara?modul=1"
+                    <Button
+                      onClick={async () => {
+                        cart?.addItem({
+                          id: "module_001",
+                          name: "Arte împletite în păr - Modul 1",
+                          price: 59.99,
+                          priceId: "price_1SXXcDK51mlAswumjOTcUXlp",
+                          quantity: 1,
+                        });
+                      }}
                       className="px-6 py-2 bg-black text-white rounded block text-center"
                     >
                       Cumpără Modul 1
-                    </a>
+                    </Button>
                   </div>
                 </div>
               </div>
@@ -97,7 +108,7 @@ export default function HorizontalScroll() {
                 src={`/cover_photo.jpeg`}
                 width={1800}
                 height={1800}
-                className="hidden lg:block w-3xl h-[600px] max-w-none rounded-xl shadow-2xl ring-1 ring-gray-400/10 sm:w-228 md:-ml-4 lg:-ml-0 shadow-[8px_16px_40px_0px_rgba(0,_0,_0,_0.3)]"
+                className="hidden lg:block lg:w-3xl h-[600px]  max-w-none rounded-xl shadow-2xl ring-1 ring-gray-400/10 md:-ml-4 lg:-ml-0 shadow-[8px_16px_40px_0px_rgba(0,_0,_0,_0.3)]"
               />
             </div>
           </div>
@@ -144,12 +155,20 @@ export default function HorizontalScroll() {
                     </li>
                   </ul>
                   <div className="mt-6">
-                    <a
-                      href="/cumpara?modul=2"
+                    <Button
+                      onClick={async () => {
+                        cart?.addItem({
+                          id: "module_002",
+                          name: "Arte împletite în păr - Modul 2",
+                          price: 59.99,
+                          priceId: "price_1SXXcQK51mlAswumLyjFuI3N",
+                          quantity: 1,
+                        });
+                      }}
                       className="px-6 py-2 bg-black text-white rounded block text-center"
                     >
                       Cumpără Modul 2
-                    </a>
+                    </Button>
                   </div>
                 </div>
               </div>
@@ -205,12 +224,20 @@ export default function HorizontalScroll() {
                     </li>
                   </ul>
                   <div className="mt-6">
-                    <a
-                      href="/cumpara?modul=2"
+                    <Button
+                      onClick={async () => {
+                        cart?.addItem({
+                          id: "module_003",
+                          name: "Arte împletite în păr - Modul 3",
+                          price: 59.99,
+                          priceId: "price_1SXXcdK51mlAswum9dwK0uC6",
+                          quantity: 1,
+                        });
+                      }}
                       className="px-6 py-2 bg-black text-white rounded block text-center"
                     >
                       Cumpără Modul 3
-                    </a>
+                    </Button>
                   </div>
                 </div>
               </div>
