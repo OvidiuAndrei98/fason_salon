@@ -924,6 +924,7 @@ export default function DomeGallery({
                     <img
                       src={it.src}
                       draggable={false}
+                      loading="lazy"
                       alt={it.alt}
                       className="w-full h-full object-cover pointer-events-none"
                       style={{
