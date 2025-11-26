@@ -2,8 +2,9 @@ import { signInAnonymously } from "firebase/auth";
 import { addDoc, collection, onSnapshot } from "firebase/firestore";
 import { firebaseAuth } from "../../lib/firebase/firebaseConfig";
 import db from "../../lib/firebase/fireStore";
+import { CartItem } from "@/app/core/cartContext";
 
-export const bookCheckout = async (priceId: string) => {
+export const bookCheckout = async (priceId: string, cartItems: CartItem[]) => {
   let userId: string | null = null;
 
   try {
@@ -33,9 +34,14 @@ export const bookCheckout = async (priceId: string) => {
       "checkout_sessions"
     );
 
+    const lineItems = cartItems.map((item) => ({
+      price: item.priceId,
+      quantity: item.quantity,
+    }));
+
     const docRef = await addDoc(checkoutSessionsRef, {
       mode: "payment",
-      price: priceId,
+      line_items: lineItems,
       success_url: window.location.origin + "/thank-you",
       cancel_url: window.location.origin,
       customer_update: {
