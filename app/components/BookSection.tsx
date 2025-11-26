@@ -1,47 +1,71 @@
 "use client";
 
+import AnimatedContent from "@/components/AnimatedContent";
+import FadeContent from "@/components/FadeContent";
 import { Button } from "@/components/ui/button";
 import Carte from "@/public/carte.png";
 import { bookCheckout } from "@/service/stripe/bookCheckout";
 import Image from "next/image";
 const BookSection = () => {
   return (
-    <div className="w-full flex flex-col items-center max-w-[1024px] mx-auto px-2 py-10">
-      <h2 className="font-heading text-3xl md:text-4xl py-[30px] md:py-[50px] font-extrabold tracking-wide bg-gradient-to-r from-slate-700 via-gray-500 to-slate-700 bg-clip-text text-transparent">
-        DESPRE CARTE
-      </h2>
+    <div className="w-full flex flex-col items-center max-w-[1024px] mx-auto px-2 ">
+      <FadeContent
+        blur={true}
+        duration={1000}
+        easing="ease-out"
+        initialOpacity={0}
+      >
+        <h2 className="font-heading text-3xl md:text-4xl py-[30px] md:py-[50px] font-extrabold tracking-wide bg-gradient-to-r from-slate-700 via-gray-500 to-slate-700 bg-clip-text text-transparent">
+          DESPRE CURS
+        </h2>
+      </FadeContent>
+
       <div className="w-full grid md:grid-cols-2 md:grid-rows-1 gap-4 lg:gap-6 ">
-        <div>
+        <AnimatedContent
+          distance={150}
+          direction="horizontal"
+          reverse={true}
+          duration={1.2}
+          ease="power3.out"
+          initialOpacity={0.2}
+          animateOpacity
+          scale={1.1}
+          threshold={0.2}
+          delay={0.3}
+        >
           <Image
             src={Carte}
             alt="Book Cover"
             className="w-full md:max-w-sm mx-auto "
           />
-        </div>
-        <div
-          className="flex flex-col items-center justify-center gap-[var(--spacing-s)] md:gap-[var(--spacing-m)]"
-          style={{ background: "#5f67ff24", padding: 8, borderRadius: 32 }}
+        </AnimatedContent>
+        <FadeContent
+          blur={true}
+          duration={1000}
+          easing="ease-out"
+          initialOpacity={0}
+          className="flex flex-col p-[30px] items-center rounded-[32px] bg-[#5f67ff24] justify-center gap-[var(--spacing-s)] md:gap-[var(--spacing-m)]"
         >
-          <h2 className="text-secondary-foreground font-heading text-2xl font-extrabold tracking-wide">
-            ARTE IMPLETITE IN PAR
+          <h2 className="text-secondary-foreground font-heading text-3xl font-extrabold tracking-wide">
+            CURS COMPLET
           </h2>
-          <p className="text-md md:text-xl text-center">
-            Am scris această carte cu gândul la materialele pe care eu însămi le
+          <p className="text-base md:text-base text-center">
+            Am scris acest curs cu gândul la materialele pe care eu însămi le
             căutam. Dedicată practicii și studiului, ea explorează coafura prin
             artă, psihologie, istorie, spiritualitate și comunicare.
           </p>
           <div className="flex flex-col items-center gap-3">
             <div className="flex items-center gap-3">
               <span className="text-lg text-muted-foreground line-through">
-                49.99 lei
+                199.99 lei
               </span>
               <span className="text-3xl font-extrabold text-accent">
-                29.99 lei
+                149.99 lei
               </span>
             </div>
           </div>
           <span className="text-sm text-muted-foreground text-center">
-            Cartea va fi livrata in format digital (PDF) prin email.
+            Cursul va fi livrat in format digital (PDF) prin email.
           </span>
           <Button
             className="p-7 rounded self-center text-xl bg-foreground text-background hover:bg-accent active:bg-accent hover:text-secondary-background"
@@ -51,8 +75,14 @@ const BookSection = () => {
           >
             Cumpară
           </Button>
-        </div>
-        <div className="flex flex-col gap-6 md:mt-8 text-center md:text-left">
+        </FadeContent>
+        <FadeContent
+          blur={true}
+          duration={1000}
+          easing="ease-out"
+          initialOpacity={0}
+          className="flex flex-col gap-6 md:mt-8 text-center md:text-left"
+        >
           <div className="space-y-4">
             <p className="text-md md:text-lg text-muted-foreground leading-relaxed">
               Aici vei găsi informații structurate ca într-un curs complet: de
@@ -80,12 +110,18 @@ const BookSection = () => {
               Cristina Grama."
             </blockquote>
           </div>
-        </div>
+        </FadeContent>
         <div className="bg-[url('/image25.jpeg')] h-[450px] md:h-[400px] bg-cover bg-center bg-no-repeat shadow-lg rounded-lg min-h-[300px] max-h-[450px] md:max-h-[400px] md:max-w-[360px] md:w-[300px] relative overflow-hidden md:justify-self-end self-center">
           <div className="absolute inset-0 bg-black/30 rounded-lg"></div>
         </div>
       </div>
-      <div className="py-4 w-full">
+      <FadeContent
+        blur={true}
+        duration={1000}
+        easing="ease-out"
+        initialOpacity={0}
+        className="py-4 w-full"
+      >
         <h2 className="font-heading text-3xl md:text-4xl py-[30px] md:py-[50px] font-extrabold tracking-wide bg-gradient-to-r from-slate-700 via-gray-500 to-slate-700 bg-clip-text text-transparent text-center">
           CE VEI INVATA
         </h2>
@@ -148,8 +184,14 @@ const BookSection = () => {
             </p>
           </div>
         </div>
-      </div>
-      <div className="py-8 w-full">
+      </FadeContent>
+      <FadeContent
+        blur={true}
+        duration={1000}
+        easing="ease-out"
+        initialOpacity={0}
+        className="py-8 w-full"
+      >
         <h2 className="font-heading text-3xl md:text-4xl py-[30px] md:py-[50px] font-extrabold tracking-wide bg-gradient-to-r from-slate-700 via-gray-500 to-slate-700 bg-clip-text text-transparent text-center">
           CAPITOLE
         </h2>
@@ -424,7 +466,7 @@ const BookSection = () => {
             </details>
           </div>
         </div>
-      </div>
+      </FadeContent>
     </div>
   );
 };

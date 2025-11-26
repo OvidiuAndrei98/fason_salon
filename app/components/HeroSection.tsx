@@ -1,5 +1,5 @@
 import Image from "next/image";
-import HeroImage from "@/public/image22.jpeg";
+import HeroImage from "@/public/imagine-hero.png";
 import { Button } from "@/components/ui/button";
 
 // Fara poza pe telefon
@@ -13,7 +13,7 @@ const HeroSection = () => {
         alt="Christina Gramma"
         className="absolute bottom-0 left-[-100px] z-1"
       /> */}
-      <div className="flex flex-col z-11">
+      <div className="flex flex-col ">
         <h1 className=" font-heading text-secondary-foreground pt-[16px] font-bold text-[clamp(2rem,_15vw,_158px)] uppercase leading-none tracking-wide m-0 p-0 text-nowrap">
           CHRISTINA GRAMMA
         </h1>
@@ -27,11 +27,11 @@ const HeroSection = () => {
             <Image
               src={HeroImage}
               alt="Christina Gramma"
-              className="max-w-[800px] w-full mt-[-50px] sm:mt-[-80px] md:mt-[-100px] z-10 h-[60vh] md:h-[80vh] object-cover rounded-lg shadow-lg opacity-65"
+              className="min-h-[400px] max-h-[800px]  w-full mt-[-50px] sm:mt-[-80px] md:mt-[-100px] z-[10] h-[60vh] md:h-[80vh] object-cover rounded-lg overflow-visible"
             />
           </div>
         </div>
-        <div className="flex flex-col gap-6 mb-[32px] md:col-span-6 lg:col-span-5">
+        <div className="flex flex-col gap-6 mb-[32px] md:col-span-6 lg:col-span-5 z-30">
           <Image
             src="/mask-text.svg"
             alt="hero-image"
