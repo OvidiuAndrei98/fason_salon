@@ -27,8 +27,7 @@ const DesktopNav = () => {
       logoAlt="Company Logo"
       items={[
         { label: "Acasa", href: "/" },
-        { label: "Carte", href: "/carte" },
-        { label: "Cumpara", href: "/cumpara" },
+        { label: "Curs", href: "/despre" },
         { label: "Contact", href: "/contact" },
       ]}
       activeHref="/"

@@ -6,6 +6,7 @@ import { useEffect, useRef } from "react";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { useCart } from "../core/cartContext";
+import { toast } from "sonner";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -27,7 +28,7 @@ export default function HorizontalScroll() {
         scrub: 1,
         snap: 1 / (panels.length - 1),
         end: () => "+=" + (slider.current?.offsetWidth ?? 0),
-        markers: true,
+        markers: false,
       },
     });
     return () => {
@@ -47,56 +48,62 @@ export default function HorizontalScroll() {
               <div className="lg:pt-4 lg:pr-8">
                 <div className="lg:max-w-lg">
                   <h2 className="text-base/7 font-semibold text-accent text-center md:text-left">
-                    Modul 1 — Introducere
+                    Modul 1 — Fizionomii
                   </h2>
                   <p className="mt-2 text-4xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-5xl text-center md:text-left">
-                    Bazele serviciilor: poziționare, portofoliu și primii
-                    clienți
+                    De la anatomia părului până la instrumentele de bază.
                   </p>
                   <p className="mt-6 text-lg/8 text-gray-700 text-center md:text-left">
-                    În Modulul 1 primești elementele esențiale pentru a-ți
-                    construi un profil profesional, a atrage primii clienți și a
-                    începe vânzările eficient.
+                    Analiză practică a formelor feței și a texturii părului —
+                    identifici tipurile de fizionomie, alegi tunsorile și
+                    tehnicile de styling potrivite pentru fiecare client, pentru
+                    rezultate estetice și funcționale.
                   </p>
                   <ul className="mt-6 space-y-3 text-gray-700">
                     <li className="flex items-start gap-3">
                       <strong className="text-indigo-600">•</strong>
                       <span>
-                        Structurarea profilului și descrierea serviciilor.
+                        Înțelegerea formelor feței și a tipurilor de păr.
                       </span>
                     </li>
                     <li className="flex items-start gap-3">
                       <strong className="text-indigo-600">•</strong>
                       <span>
-                        Cum să alegi și să pregătești fotografiile pentru
-                        portofoliu.
+                        <span>
+                          Tipuri de păr (textură, porozitate, grosime)
+                        </span>
                       </span>
                     </li>
                     <li className="flex items-start gap-3">
                       <strong className="text-indigo-600">•</strong>
-                      <span>
-                        Strategii simple de preț și pachete pentru început.
-                      </span>
+                      <span>Instrumente esențiale și tehnici de bază.</span>
                     </li>
                     <li className="flex items-start gap-3">
                       <strong className="text-indigo-600">•</strong>
                       <span>
-                        Setări de contact și gestionare a rezervărilor.
+                        Principii de tunsori și styling adaptate fizionomiei.
                       </span>
                     </li>
                   </ul>
                   <div className="mt-6">
                     <Button
                       onClick={async () => {
-                        cart?.addItem({
-                          id: "module_001",
-                          name: "Arte împletite în păr - Modul 1",
-                          price: 59.99,
-                          priceId: "price_1SXXcDK51mlAswumjOTcUXlp",
-                          quantity: 1,
-                        });
+                        const isInCart = cart?.items.find(
+                          (item) => item.id === "book_001"
+                        );
+                        if (!isInCart) {
+                          cart?.addItem({
+                            id: "module_001",
+                            name: "Arte împletite în păr - Modul 1",
+                            price: 59.99,
+                            priceId: "price_1SXXcDK51mlAswumjOTcUXlp",
+                            quantity: 1,
+                          });
+                        } else {
+                          toast("Modulul este deja in cos.");
+                        }
                       }}
-                      className="px-6 py-2 bg-black text-white rounded block text-center"
+                      className="px-6 py-8 bg-black text-white cursor-pointer"
                     >
                       Cumpără Modul 1
                     </Button>
@@ -108,7 +115,7 @@ export default function HorizontalScroll() {
                 src={`/cover_photo.jpeg`}
                 width={1800}
                 height={1800}
-                className="hidden lg:block lg:w-3xl h-[600px]  max-w-none rounded-xl shadow-2xl ring-1 ring-gray-400/10 md:-ml-4 lg:-ml-0 shadow-[8px_16px_40px_0px_rgba(0,_0,_0,_0.3)]"
+                className="hidden lg:block w-3xl h-[600px] max-w-none rounded-xl shadow-2xl ring-1 ring-gray-400/10 sm:w-228 md:-ml-4 lg:-ml-0 shadow-[8px_16px_40px_0px_rgba(0,_0,_0,_0.3)]"
               />
             </div>
           </div>
@@ -120,52 +127,62 @@ export default function HorizontalScroll() {
               <div className="lg:pt-4 lg:pr-8">
                 <div className="lg:max-w-lg">
                   <h2 className="text-base/7 font-semibold text-accent text-center md:text-left">
-                    Modul 2 — Practic
+                    Modul 2 — Fizionomii
                   </h2>
                   <p className="mt-2 text-4xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-5xl text-center md:text-left">
-                    Tehnici practice, servicii live și gestionarea clienților
+                    De la anatomia părului până la instrumentele de bază.
                   </p>
                   <p className="mt-6 text-lg/8 text-gray-700 text-center md:text-left">
-                    În Modulul 2 treci la practică: sesiuni reale, workflow
-                    eficient și metode de livrare care îi impresionează pe
-                    clienți.
+                    Analiză practică a formelor feței și a texturii părului —
+                    identifici tipurile de fizionomie, alegi tunsorile și
+                    tehnicile de styling potrivite pentru fiecare client, pentru
+                    rezultate estetice și funcționale.
                   </p>
                   <ul className="mt-6 space-y-3 text-gray-700">
                     <li className="flex items-start gap-3">
                       <strong className="text-indigo-600">•</strong>
                       <span>
-                        Planificarea și desfășurarea unei sesiuni profesionale.
+                        Înțelegerea formelor feței și a tipurilor de păr.
                       </span>
                     </li>
                     <li className="flex items-start gap-3">
                       <strong className="text-indigo-600">•</strong>
                       <span>
-                        Tehnici de comunicare și gestionare a așteptărilor.
+                        <span>
+                          Tipuri de păr (textură, porozitate, grosime)
+                        </span>
                       </span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <strong className="text-indigo-600">•</strong>
+                      <span>Instrumente esențiale și tehnici de bază.</span>
                     </li>
                     <li className="flex items-start gap-3">
                       <strong className="text-indigo-600">•</strong>
                       <span>
-                        Flux de lucru pentru editare rapidă și livrare.
+                        Principii de tunsori și styling adaptate fizionomiei.
                       </span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <strong className="text-indigo-600">•</strong>
-                      <span>Strategii de fidelizare și recomandări.</span>
                     </li>
                   </ul>
                   <div className="mt-6">
                     <Button
                       onClick={async () => {
-                        cart?.addItem({
-                          id: "module_002",
-                          name: "Arte împletite în păr - Modul 2",
-                          price: 59.99,
-                          priceId: "price_1SXXcQK51mlAswumLyjFuI3N",
-                          quantity: 1,
-                        });
+                        const isInCart = cart?.items.find(
+                          (item) => item.id === "module_002"
+                        );
+                        if (!isInCart) {
+                          cart?.addItem({
+                            id: "module_002",
+                            name: "Arte împletite în păr - Modul 2",
+                            price: 59.99,
+                            priceId: "price_1SXXcQK51mlAswumLyjFuI3N",
+                            quantity: 1,
+                          });
+                        } else {
+                          toast("Modulul este deja in cos.");
+                        }
                       }}
-                      className="px-6 py-2 bg-black text-white rounded block text-center"
+                      className="px-6 py-8 bg-black text-white cursor-pointer"
                     >
                       Cumpără Modul 2
                     </Button>
@@ -189,52 +206,62 @@ export default function HorizontalScroll() {
               <div className="lg:pt-4 lg:pr-8">
                 <div className="lg:max-w-lg">
                   <h2 className="text-base/7 font-semibold text-accent text-center md:text-left">
-                    Modul 3 — Avansat
+                    Modul 3 — Fizionomii
                   </h2>
                   <p className="mt-2 text-4xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-5xl text-center md:text-left">
-                    Tehnici practice, servicii live și gestionarea clienților
+                    De la anatomia părului până la instrumentele de bază.
                   </p>
                   <p className="mt-6 text-lg/8 text-gray-700 text-center md:text-left">
-                    În Modulul 2 treci la practică: sesiuni reale, workflow
-                    eficient și metode de livrare care îi impresionează pe
-                    clienți.
+                    Analiză practică a formelor feței și a texturii părului —
+                    identifici tipurile de fizionomie, alegi tunsorile și
+                    tehnicile de styling potrivite pentru fiecare client, pentru
+                    rezultate estetice și funcționale.
                   </p>
                   <ul className="mt-6 space-y-3 text-gray-700">
                     <li className="flex items-start gap-3">
                       <strong className="text-indigo-600">•</strong>
                       <span>
-                        Planificarea și desfășurarea unei sesiuni profesionale.
+                        Înțelegerea formelor feței și a tipurilor de păr.
                       </span>
                     </li>
                     <li className="flex items-start gap-3">
                       <strong className="text-indigo-600">•</strong>
                       <span>
-                        Tehnici de comunicare și gestionare a așteptărilor.
+                        <span>
+                          Tipuri de păr (textură, porozitate, grosime)
+                        </span>
                       </span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <strong className="text-indigo-600">•</strong>
+                      <span>Instrumente esențiale și tehnici de bază.</span>
                     </li>
                     <li className="flex items-start gap-3">
                       <strong className="text-indigo-600">•</strong>
                       <span>
-                        Flux de lucru pentru editare rapidă și livrare.
+                        Principii de tunsori și styling adaptate fizionomiei.
                       </span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <strong className="text-indigo-600">•</strong>
-                      <span>Strategii de fidelizare și recomandări.</span>
                     </li>
                   </ul>
                   <div className="mt-6">
                     <Button
                       onClick={async () => {
-                        cart?.addItem({
-                          id: "module_003",
-                          name: "Arte împletite în păr - Modul 3",
-                          price: 59.99,
-                          priceId: "price_1SXXcdK51mlAswum9dwK0uC6",
-                          quantity: 1,
-                        });
+                        const isInCart = cart?.items.find(
+                          (item) => item.id === "module_003"
+                        );
+                        if (!isInCart) {
+                          cart?.addItem({
+                            id: "module_003",
+                            name: "Arte împletite în păr - Modul 3",
+                            price: 59.99,
+                            priceId: "price_1SXXcdK51mlAswum9dwK0uC6",
+                            quantity: 1,
+                          });
+                        } else {
+                          toast("Modulul este deja in cos.");
+                        }
                       }}
-                      className="px-6 py-2 bg-black text-white rounded block text-center"
+                      className="px-6 py-8 bg-black text-white cursor-pointer"
                     >
                       Cumpără Modul 3
                     </Button>

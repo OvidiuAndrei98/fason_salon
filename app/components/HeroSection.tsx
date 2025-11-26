@@ -47,12 +47,12 @@ const HeroSection = () => {
           </div>
         </div>
         <FadeContent className="flex flex-col gap-6 mb-[32px] md:col-span-6 lg:col-span-5 z-30">
-          {/* <Image
-              src="/mask-text.svg"
-              alt="hero-image"
-              width={800}
-              height={800}
-            /> */}
+          <Image
+            src="/mask-text.svg"
+            alt="hero-image"
+            width={800}
+            height={800}
+          />
 
           <span className="text-center text-md  md:text-start text-base text-secondary-foreground ">
             {/* O culoare nu este niciodata frumoasa sau urata, ea doar este... */}
@@ -60,7 +60,7 @@ const HeroSection = () => {
             împletite în păr" nu se citește, se trăiește.
           </span>
           <Button className="p-8 rounded self-center md:self-start text-xl bg-foreground text-background hover:bg-accent active:bg-accent hover:text-secondary-background">
-            CUMPĂRĂ CARTEA
+            Vezi Detalii
           </Button>
         </FadeContent>
       </div>

@@ -18,7 +18,6 @@ export default function Home() {
       <HorizontalScroll />
       <PhotosSection />
       <FaqSection />
-      <div>Total Items in Cart: {cart?.totalItems}</div>
     </div>
   );
 }
