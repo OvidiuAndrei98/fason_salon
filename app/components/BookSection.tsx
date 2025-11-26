@@ -83,6 +83,7 @@ const BookSection = () => {
                   priceId: "price_1SXXbpK51mlAswumLSp0IRJI",
                   quantity: 1,
                 });
+                toast.info("Produsul a fost adăugat în coș.");
               } else {
                 toast.info("Produsul este deja în coș.");
               }

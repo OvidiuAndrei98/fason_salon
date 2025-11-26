@@ -99,8 +99,9 @@ export default function HorizontalScroll() {
                             priceId: "price_1SXXcDK51mlAswumjOTcUXlp",
                             quantity: 1,
                           });
+                          toast.info("Produsul a fost adăugat în coș.");
                         } else {
-                          toast("Modulul este deja in cos.");
+                          toast.info("Modulul este deja în coș.");
                         }
                       }}
                       className="px-6 py-8 bg-black text-white cursor-pointer"
@@ -178,8 +179,9 @@ export default function HorizontalScroll() {
                             priceId: "price_1SXXcQK51mlAswumLyjFuI3N",
                             quantity: 1,
                           });
+                          toast.info("Produsul a fost adăugat în coș.");
                         } else {
-                          toast("Modulul este deja in cos.");
+                          toast.info("Modulul este deja în coș.");
                         }
                       }}
                       className="px-6 py-8 bg-black text-white cursor-pointer"
@@ -257,8 +259,9 @@ export default function HorizontalScroll() {
                             priceId: "price_1SXXcdK51mlAswum9dwK0uC6",
                             quantity: 1,
                           });
+                          toast.info("Produsul a fost adăugat în coș.");
                         } else {
-                          toast("Modulul este deja in cos.");
+                          toast.info("Modulul este deja în coș.");
                         }
                       }}
                       className="px-6 py-8 bg-black text-white cursor-pointer"
