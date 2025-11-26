@@ -4,9 +4,10 @@ import AnimatedContent from "@/components/AnimatedContent";
 import FadeContent from "@/components/FadeContent";
 import { Button } from "@/components/ui/button";
 import Carte from "@/public/carte.png";
-import { bookCheckout } from "@/service/stripe/bookCheckout";
 import Image from "next/image";
+import { useCart } from "../core/cartContext";
 const BookSection = () => {
+  const cart = useCart();
   return (
     <div className="w-full flex flex-col items-center max-w-[1024px] mx-auto px-2 ">
       <FadeContent
@@ -69,9 +70,15 @@ const BookSection = () => {
           </span>
           <Button
             className="p-7 rounded self-center text-xl bg-foreground text-background hover:bg-accent active:bg-accent hover:text-secondary-background"
-            onClick={async () =>
-              await bookCheckout("price_1SQnRKK51mlAswumsjF5JEKH")
-            }
+            onClick={async () => {
+              cart?.addItem({
+                id: "book_001",
+                name: "Carte",
+                price: 149.99,
+                priceId: "price_1SQnRKK51mlAswumsjF5JEKH",
+                quantity: 1,
+              });
+            }}
           >
             Cumpară
           </Button>
