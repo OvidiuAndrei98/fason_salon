@@ -146,3 +146,17 @@
     font-family: var(--font-heading);
   }
 }
+
+.text-fill-gradient {
+  -webkit-background-clip: text; /* Crucial pentru majoritatea browserelor */
+  background-clip: text;
+}
+
+@media screen and (max-width: 1450px) {
+  .hoz-img {
+    width: 550px;
+  }
+  .hoz-grid {
+    column-gap: 4px;
+  }
+}

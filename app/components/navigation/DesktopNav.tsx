@@ -22,23 +22,21 @@ const DesktopNav = () => {
   }, []);
 
   return (
-    <PillNav
-      logo={"/vercel.svg"}
-      logoAlt="Company Logo"
-      items={[
-        { label: "Acasa", href: "/" },
-        { label: "Curs", href: "/despre" },
-        { label: "Contact", href: "/contact" },
-      ]}
-      activeHref="/"
-      className={`custom-nav z-50 w-full max-w-[1024px] mx-auto`}
-      ease="power2.easeOut"
-      initialLoadAnimation={false}
-      baseColor="#252525"
-      pillColor="#f6f8ff"
-      hoveredPillTextColor="#ffffff"
-      pillTextColor="#000000"
-    />
+    <header
+      className={`absolute flex flex-row items-center justify-between w-full z-50 transition-all duration-300 ${
+        isScrolled
+          ? "!fixed backdrop-blur-md bg-white/70 shadow-md top-0 left-0"
+          : "bg-transparent"
+      }  px-4 py-2 md:px-8`}
+    >
+      <div className="text-white">LOGO</div>
+      <ul className="flex justify-center gap-8 py-2 uppercase font-semibold text-lg text-accent/70">
+        <li>[ACASA]</li>
+        <li>[DESPRE]</li>
+        <li>[CURSURI]</li>
+        <li>[CONTACT]</li>
+      </ul>
+    </header>
   );
 };
 

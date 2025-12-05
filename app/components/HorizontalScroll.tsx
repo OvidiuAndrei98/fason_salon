@@ -44,22 +44,22 @@ export default function HorizontalScroll() {
       >
         <div className="w-screen h-screen panel flex flex-col items-center justify-center gap-6 p-8 ">
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
-            <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
+            <div className="hoz-grid mx-auto grid max-w-2xl grid-cols-1 gap-x-4 lg:gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
               <div className="lg:pt-4 lg:pr-8">
-                <div className="lg:max-w-lg">
+                <div className="lg:max-w-lg flex flex-col items-center md:items-start">
                   <h2 className="text-base/7 font-semibold text-accent text-center md:text-left">
                     Modul 1 — Fizionomii
                   </h2>
-                  <p className="mt-2 text-4xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-5xl text-center md:text-left">
+                  <p className="mt-2 text-2xl lg:text-4xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-5xl text-center md:text-left">
                     De la anatomia părului până la instrumentele de bază.
                   </p>
-                  <p className="mt-6 text-lg/8 text-gray-700 text-center md:text-left">
+                  <p className="mt-6 text-lg/6 lg:text-lg/8 text-gray-700 text-center md:text-left">
                     Analiză practică a formelor feței și a texturii părului —
                     identifici tipurile de fizionomie, alegi tunsorile și
                     tehnicile de styling potrivite pentru fiecare client, pentru
                     rezultate estetice și funcționale.
                   </p>
-                  <ul className="mt-6 space-y-3 text-gray-700">
+                  <ul className="mt-6 space-y-3 text-gray-700 text-lg/4 lg:text-lg/6">
                     <li className="flex items-start gap-3">
                       <strong className="text-indigo-600">•</strong>
                       <span>
@@ -116,7 +116,7 @@ export default function HorizontalScroll() {
                 src={`/cover_photo.jpeg`}
                 width={1800}
                 height={1800}
-                className="hidden lg:block w-3xl h-[600px] max-w-none rounded-xl shadow-2xl ring-1 ring-gray-400/10 sm:w-228 md:-ml-4 lg:-ml-0 shadow-[8px_16px_40px_0px_rgba(0,_0,_0,_0.3)]"
+                className="hoz-img hidden lg:block h-[600px] max-w-none rounded-xl shadow-2xl ring-1 ring-gray-400/10 sm:w-228 md:-ml-4 lg:-ml-0 shadow-[8px_16px_40px_0px_rgba(0,_0,_0,_0.3)]"
               />
             </div>
           </div>
@@ -124,22 +124,22 @@ export default function HorizontalScroll() {
 
         <div className="w-screen h-screen panel flex flex-col items-center justify-center gap-6 p-8 ">
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
-            <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
+            <div className="hoz-grid mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
               <div className="lg:pt-4 lg:pr-8">
-                <div className="lg:max-w-lg">
+                <div className="lg:max-w-lg  flex flex-col items-center md:items-start">
                   <h2 className="text-base/7 font-semibold text-accent text-center md:text-left">
                     Modul 2 — Fizionomii
                   </h2>
-                  <p className="mt-2 text-4xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-5xl text-center md:text-left">
+                  <p className="mt-2 text-2xl lg:text-4xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-5xl text-center md:text-left">
                     De la anatomia părului până la instrumentele de bază.
                   </p>
-                  <p className="mt-6 text-lg/8 text-gray-700 text-center md:text-left">
+                  <p className="mt-6 text-lg/6 lg:text-lg/8 text-gray-700 text-center md:text-left">
                     Analiză practică a formelor feței și a texturii părului —
                     identifici tipurile de fizionomie, alegi tunsorile și
                     tehnicile de styling potrivite pentru fiecare client, pentru
                     rezultate estetice și funcționale.
                   </p>
-                  <ul className="mt-6 space-y-3 text-gray-700">
+                  <ul className="mt-6 space-y-3 text-gray-700 text-lg/4 lg:text-lg/6">
                     <li className="flex items-start gap-3">
                       <strong className="text-indigo-600">•</strong>
                       <span>
@@ -196,7 +196,7 @@ export default function HorizontalScroll() {
                 src={`/image12.jpeg`}
                 width={1800}
                 height={1800}
-                className="hidden lg:block w-3xl h-[600px] max-w-none rounded-xl shadow-2xl ring-1 ring-gray-400/10 sm:w-228 md:-ml-4 lg:-ml-0 shadow-[8px_16px_40px_0px_rgba(0,_0,_0,_0.3)]"
+                className="hoz-img hidden lg:block w-3xl h-[600px] max-w-none rounded-xl shadow-2xl ring-1 ring-gray-400/10 sm:w-228 md:-ml-4 lg:-ml-0 shadow-[8px_16px_40px_0px_rgba(0,_0,_0,_0.3)]"
               />
             </div>
           </div>
@@ -204,22 +204,22 @@ export default function HorizontalScroll() {
 
         <div className="w-screen h-screen panel flex flex-col items-center justify-center gap-6 p-8  text-white">
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
-            <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
+            <div className="hoz-grid mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
               <div className="lg:pt-4 lg:pr-8">
-                <div className="lg:max-w-lg">
+                <div className="lg:max-w-lg flex flex-col items-center md:items-start">
                   <h2 className="text-base/7 font-semibold text-accent text-center md:text-left">
                     Modul 3 — Fizionomii
                   </h2>
-                  <p className="mt-2 text-4xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-5xl text-center md:text-left">
+                  <p className="mt-2 text-2xl lg:text-4xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-5xl text-center md:text-left">
                     De la anatomia părului până la instrumentele de bază.
                   </p>
-                  <p className="mt-6 text-lg/8 text-gray-700 text-center md:text-left">
+                  <p className="mt-6 text-lg/6 lg:text-lg/8 text-gray-700 text-center md:text-left">
                     Analiză practică a formelor feței și a texturii părului —
                     identifici tipurile de fizionomie, alegi tunsorile și
                     tehnicile de styling potrivite pentru fiecare client, pentru
                     rezultate estetice și funcționale.
                   </p>
-                  <ul className="mt-6 space-y-3 text-gray-700">
+                  <ul className="mt-6 space-y-3 text-gray-700 text-lg/4 lg:text-lg/6">
                     <li className="flex items-start gap-3">
                       <strong className="text-indigo-600">•</strong>
                       <span>
@@ -276,7 +276,7 @@ export default function HorizontalScroll() {
                 src={`/image9.jpeg`}
                 width={1800}
                 height={1800}
-                className="hidden lg:block w-3xl h-[600px] max-w-none rounded-xl shadow-2xl ring-1 ring-gray-400/10 sm:w-228 md:-ml-4 lg:-ml-0 shadow-[8px_16px_40px_0px_rgba(0,_0,_0,_0.3)]"
+                className="hoz-img hidden lg:block w-3xl h-[600px] max-w-none rounded-xl shadow-2xl ring-1 ring-gray-400/10 sm:w-228 md:-ml-4 lg:-ml-0 shadow-[8px_16px_40px_0px_rgba(0,_0,_0,_0.3)]"
               />
             </div>
           </div>

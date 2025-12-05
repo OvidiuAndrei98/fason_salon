@@ -102,11 +102,15 @@ const BookSection = () => {
         >
           <div className="space-y-4">
             <p className="text-md md:text-lg text-muted-foreground leading-relaxed">
-              Aici vei găsi informații structurate ca într-un curs complet: de
-              la tuns și colorare, până la coafuri elaborate și secretele
-              armoniei estetice. Fiecare capitol e o lecție, fiecare imagine — o
-              sursă de inspirație.
+              Aici vei găsi informații structurate ca într-un curs complet:
             </p>
+            <ul className="text-md md:text-lg text-muted-foreground leading-relaxed space-y-2 flex flex-col items-start justify-start list-inside list-disc pl-4">
+              <li>Tuns și culoare</li>
+              <li>Coduri estetice</li>
+              <li>Proporții</li>
+              <li>Armonie vizuală</li>
+              <li>Tehnici explicate logic</li>
+            </ul>
 
             <p className="text-md md:text-lg text-muted-foreground leading-relaxed">
               Tot ce a construit Cristina Grama în ani de experiență, concentrat
@@ -116,7 +120,7 @@ const BookSection = () => {
 
             <p className="text-md md:text-lg text-muted-foreground leading-relaxed font-sans">
               Părul nu e doar materie — e poveste, culoare și mișcare. „Arte
-              împletite în păr" nu se citește, se trăiește. Platforma reunește
+              împletite în păr" nu se citește, se trăiește. Cursul reunește
               cunoștințe, tehnici și viziuni din arta hairstylingului, într-o
               formă gândită ca un curs complet. O carte care inspiră, educă și
               redefinește standardele meseriei.
@@ -185,13 +189,8 @@ const BookSection = () => {
               </summary>
               <div className="px-6 pb-6">
                 <p className="text-muted-foreground mb-3">
-                  Bazele teoretice și practice ale artei coafurii
-                </p>
-                <p className="text-sm text-muted-foreground leading-relaxed">
-                  Acest capitol introduce conceptele fundamentale ale
-                  hairstylingului, de la anatomia părului până la instrumentele
-                  de bază. Vei învăța despre tipurile de păr, texturi și cum să
-                  alegi tehnicile potrivite pentru fiecare client.
+                  Cum citești forma feței, direcția firelor, volumul natural și
+                  cum creezi proporții corecte.
                 </p>
               </div>
             </details>
@@ -224,13 +223,8 @@ const BookSection = () => {
               </summary>
               <div className="px-6 pb-6">
                 <p className="text-muted-foreground mb-3">
-                  Metode avansate pentru tunsori contemporane
-                </p>
-                <p className="text-sm text-muted-foreground leading-relaxed">
-                  Explorează tehnicile moderne de tuns, de la bob-ul clasic la
-                  tunsori asimetrice și texturate. Capitolul include ghiduri pas
-                  cu pas pentru realizarea unor tunsori trendy și adaptarea lor
-                  la forma feței.
+                  Întrebări simple, rezultate clare. Cum afli ce își dorește cu
+                  adevărat clientul.
                 </p>
               </div>
             </details>
@@ -263,12 +257,8 @@ const BookSection = () => {
               </summary>
               <div className="px-6 pb-6">
                 <p className="text-muted-foreground mb-3">
-                  De la nuanțe clasice la efecte spectaculoase
-                </p>
-                <p className="text-sm text-muted-foreground leading-relaxed">
-                  Descoperă secretele colorării profesionale: teoria culorilor,
-                  tehnici de balayage, highlights și lowlights. Învață să creezi
-                  tranziții perfecte și să obții culori vibrante și durabile.
+                  Proporții, linii, echilibru, detalii invizibile care schimbă
+                  tot.
                 </p>
               </div>
             </details>
@@ -301,13 +291,8 @@ const BookSection = () => {
               </summary>
               <div className="px-6 pb-6">
                 <p className="text-muted-foreground mb-3">
-                  Creații elaborate pentru momente speciale
-                </p>
-                <p className="text-sm text-muted-foreground leading-relaxed">
-                  Tehnici avansate pentru coafuri de nuntă, cocktail și
-                  evenimente formale. De la chignons eleganți la împletituri
-                  complexe, capitolul oferă ghiduri detaliate pentru crearea
-                  unor coafuri memorabile.
+                  Subtonuri, reflexe, culoare potrivită pentru identitatea
+                  fiecărui om.
                 </p>
               </div>
             </details>
@@ -340,12 +325,8 @@ const BookSection = () => {
               </summary>
               <div className="px-6 pb-6">
                 <p className="text-muted-foreground mb-3">
-                  Relația cu clientul și impactul psihologic
-                </p>
-                <p className="text-sm text-muted-foreground leading-relaxed">
-                  Înțelege impactul psihologic al coafurii asupra încrederii în
-                  sine. Capitolul acoperă tehnici de comunicare eficientă cu
-                  clienții și cum să creezi o experiență memorabilă în salon.
+                  Pași logici, tehnici sigure, cum protejezi firul și eviți
+                  greșelile.
                 </p>
               </div>
             </details>
@@ -378,13 +359,7 @@ const BookSection = () => {
               </summary>
               <div className="px-6 pb-6">
                 <p className="text-muted-foreground mb-3">
-                  Strategii de succes în industria beauty
-                </p>
-                <p className="text-sm text-muted-foreground leading-relaxed">
-                  Ghidul complet pentru dezvoltarea unei cariere de succes: de
-                  la deschiderea propriului salon la strategii de marketing și
-                  fidelizarea clientelei. Incluye planuri de afaceri și sfaturi
-                  financiare.
+                  Coafuri simple și complexe, structuri, volum și expresivitate.
                 </p>
               </div>
             </details>
@@ -416,13 +391,8 @@ const BookSection = () => {
               </summary>
               <div className="px-6 pb-6">
                 <p className="text-muted-foreground mb-3">
-                  Strategii de succes în industria beauty
-                </p>
-                <p className="text-sm text-muted-foreground leading-relaxed">
-                  Ghidul complet pentru dezvoltarea unei cariere de succes: de
-                  la deschiderea propriului salon la strategii de marketing și
-                  fidelizarea clientelei. Incluye planuri de afaceri și sfaturi
-                  financiare.
+                  Psihologie, simbolistică, estetică — fundația unei imagini
+                  reușite.
                 </p>
               </div>
             </details>

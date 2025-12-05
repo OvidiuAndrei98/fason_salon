@@ -6,7 +6,7 @@ import FaqSection from "./components/FaqSection";
 import HeroSection from "./components/HeroSection";
 import HorizontalScroll from "./components/HorizontalScroll";
 import PhotosSection from "./components/PhotosSection";
-import { CartProvider, useCart } from "./core/cartContext";
+import { useCart } from "./core/cartContext";
 
 export default function Home() {
   const cart = useCart();
