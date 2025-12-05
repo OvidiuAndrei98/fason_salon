@@ -1,5 +1,5 @@
 import Image from "next/image";
-import HeroImage from "@/public/imagine-hero.png";
+import HeroImage from "@/public/imagine-hero.webp";
 import { Button } from "@/components/ui/button";
 import AnimatedContent from "@/components/AnimatedContent";
 import FadeContent from "@/components/FadeContent";
