@@ -7,6 +7,7 @@ import Carte from "@/public/carte.png";
 import Image from "next/image";
 import { useCart } from "../core/cartContext";
 import { toast } from "sonner";
+import MagicBento from "@/components/bento-grid/MagicBento";
 const BookSection = () => {
   const cart = useCart();
   return (
@@ -141,64 +142,9 @@ const BookSection = () => {
         <h2 className="font-heading text-3xl md:text-4xl py-[30px] md:py-[50px] font-extrabold tracking-wide bg-gradient-to-r from-slate-700 via-gray-500 to-slate-700 bg-clip-text text-transparent text-center">
           CE VEI INVATA
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 relative">
+        <div className="relative">
           <div className="absolute inset-0 bg-[url('/splash_hero.png')] bg-cover bg-center bg-no-repeat opacity-10 rounded-lg md:h-[170%] -z-[1] md:-top-[70px]"></div>
-
-          <div className="relative z-10 bg-gradient-to-br from-accent/10 to-accent/5 p-6 rounded-lg shadow-md border border-accent/20 backdrop-blur-sm hover:bg-accent/5 transition-colors">
-            <h3 className="text-xl font-semibold mb-3 text-secondary-foreground font-sans">
-              Tehnici de Tuns
-            </h3>
-            <p className="text-muted-foreground">
-              Metode avansate de tuns pentru diferite tipuri de păr și stiluri
-              moderne.
-            </p>
-          </div>
-
-          <div className="relative z-10 bg-gradient-to-br from-accent/10 to-accent/5 p-6 rounded-lg shadow-md border border-accent/20 backdrop-blur-sm hover:bg-accent/5 transition-colors">
-            <h3 className="text-xl font-semibold mb-3 text-secondary-foreground font-sans">
-              Colorare Profesională
-            </h3>
-            <p className="text-muted-foreground">
-              Secretele colorării, de la tehnici de bază până la efecte
-              complexe.
-            </p>
-          </div>
-
-          <div className="relative z-10 bg-gradient-to-br from-accent/10 to-accent/5 p-6 rounded-lg shadow-md border border-accent/20 backdrop-blur-sm hover:bg-accent/5 transition-colors">
-            <h3 className="text-xl font-semibold mb-3 text-secondary-foreground font-sans">
-              Coafuri Elaborate
-            </h3>
-            <p className="text-muted-foreground">
-              Crearea unor coafuri sofisticate pentru evenimente speciale.
-            </p>
-          </div>
-
-          <div className="relative z-10 bg-gradient-to-br from-accent/10 to-accent/5 p-6 rounded-lg shadow-md border border-accent/20 backdrop-blur-sm hover:bg-accent/5 transition-colors">
-            <h3 className="text-xl font-semibold mb-3 text-secondary-foreground font-sans">
-              Armonia Estetică
-            </h3>
-            <p className="text-muted-foreground">
-              Principiile frumuseții și cum să le aplici în hairstyling.
-            </p>
-          </div>
-
-          <div className="relative z-10 bg-gradient-to-br from-accent/10 to-accent/5 p-6 rounded-lg shadow-md border border-accent/20 backdrop-blur-sm hover:bg-accent/5 transition-colors">
-            <h3 className="text-xl font-semibold mb-3 text-secondary-foreground font-sans">
-              Psihologia Frumuseții
-            </h3>
-            <p className="text-muted-foreground">
-              Cum influențează coafura încrederea și percepția de sine.
-            </p>
-          </div>
-
-          <div className="relative z-10 bg-gradient-to-br from-accent/10 to-accent/5 p-6 rounded-lg shadow-md border border-accent/20 backdrop-blur-sm hover:bg-accent/5 transition-colors">
-            <h3 className="text-xl font-semibold mb-3 text-secondary-foreground font-sans">
-              Business în Hairstyling
-            </h3>
-            <p className="text-muted-foreground">
-              Strategii pentru dezvoltarea unei cariere de succes în beauty.
-            </p>
-          </div>
+          <MagicBento />
         </div>
       </FadeContent>
       <FadeContent

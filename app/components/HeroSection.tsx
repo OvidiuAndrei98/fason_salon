@@ -55,9 +55,8 @@ const HeroSection = () => {
           />
 
           <span className="text-center text-md  md:text-start text-base text-secondary-foreground ">
-            {/* O culoare nu este niciodata frumoasa sau urata, ea doar este... */}
-            Părul nu e doar materie — e poveste, culoare și mișcare. „Arte
-            împletite în păr" nu se citește, se trăiește.
+            Pentru mine, părul nu este doar tehnică. Este o formă de comunicare
+            modul în care un om spune cine este fără să rostească un cuvânt.
           </span>
           <Button className="p-8 rounded self-center md:self-start text-xl bg-foreground text-background hover:bg-accent active:bg-accent hover:text-secondary-background">
             Vezi Detalii
