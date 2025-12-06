@@ -3,17 +3,23 @@ import HeroImage from "@/public/imagine-hero.webp";
 import { Button } from "@/components/ui/button";
 import AnimatedContent from "@/components/AnimatedContent";
 import FadeContent from "@/components/FadeContent";
+import Pattern from "@/public/topography.svg";
 
 // Fara poza pe telefon
 
 const HeroSection = () => {
   return (
     <div className="relative bg-[radial-gradient(circle,rgba(56,56,56,1)_0%,rgba(12,12,12,1)_100%)] overflow-hidden">
+      <Image
+        src={Pattern}
+        alt="pattern"
+        className="w-full h-full absolute z-[] object-cover opacity-8 "
+      />
       <div className="relative flex flex-col p-[8px_8px_0_8px] hero-section max-w-[1024px] mx-auto pt-[50px]">
         <div className="absolute bottom-0 right-[-50px] w-[200px] h-[400px] bg-accent opacity-50 z-0 pointer-events-none transform skew-y-12" />
         <div className="flex flex-col ">
           <h1
-            className="text-fill-gradient bg-[linear-gradient(180deg,rgba(249,249,249,1)_0%,rgba(40,40,40,1)_100%)]
+            className="hero-title text-fill-gradient bg-[linear-gradient(180deg,rgba(249,249,249,1)_0%,rgba(40,40,40,1)_100%)]
     text-transparent font-heading pt-[16px] font-bold text-[clamp(2rem,_15vw,_158px)] uppercase leading-none tracking-wide m-0 p-0 text-nowrap text-center"
           >
             CHRISTINA GRAMMA

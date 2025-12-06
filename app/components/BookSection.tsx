@@ -132,7 +132,7 @@ const BookSection = () => {
             </blockquote>
           </div>
         </FadeContent>
-        <div className="bg-[url('/image25.jpeg')] h-[450px] md:h-[400px] bg-cover bg-center bg-no-repeat shadow-lg rounded-lg min-h-[300px] max-h-[450px] md:max-h-[400px] md:max-w-[360px] md:w-[300px] relative overflow-hidden md:justify-self-end self-center">
+        <div className="bg-[url('/image25.webp')] h-[450px] md:h-[400px] bg-cover bg-center bg-no-repeat shadow-lg rounded-lg min-h-[300px] max-h-[450px] md:max-h-[400px] md:max-w-[360px] md:w-[300px] relative overflow-hidden md:justify-self-end self-center">
           <div className="absolute inset-0 bg-black/30 rounded-lg"></div>
         </div>
       </div>
