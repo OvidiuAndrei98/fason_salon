@@ -121,9 +121,8 @@ const BookSection = () => {
             <p className="text-md md:text-lg text-muted-foreground leading-relaxed font-sans">
               Părul nu e doar materie — e poveste, culoare și mișcare. „Arte
               împletite în păr" nu se citește, se trăiește. Cursul reunește
-              cunoștințe, tehnici și viziuni din arta hairstylingului, într-o
-              formă gândită ca un curs complet. O carte care inspiră, educă și
-              redefinește standardele meseriei.
+              cunoștințe, tehnici și viziuni din arta hairstylingului. Un curs
+              care inspiră, educă și redefinește standardele meseriei.
             </p>
 
             <blockquote className="text-lg md:text-xl font-semibold text-secondary-foreground italic border-l-4 border-accent pl-4 mt-6">

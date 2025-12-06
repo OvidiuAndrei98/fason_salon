@@ -59,7 +59,7 @@ const HeroSection = () => {
               alt="hero-image"
               width={800}
               height={800}
-              className="brightness-200 hidden md:block w-[300px] lg:w-[400px] md:scale-[1.1]"
+              className="brightness-220 hidden md:block w-[300px] lg:w-[400px] md:scale-[1.1]"
             />
 
             <span className="text-center font-sans text-md  md:text-start text-base text-white leading-relaxed">

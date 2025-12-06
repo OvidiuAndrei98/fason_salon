@@ -43,46 +43,44 @@ export default function HorizontalScroll() {
         className="w-[600vw] h-screen flex flex-wrap relative overflow-hidden"
       >
         <div className="w-screen h-screen panel flex flex-col items-center justify-center gap-6 p-8 ">
-          <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <div className="mx-auto max-w-7xl py-6 md:py-0 px-6 lg:px-8 flex flex-col justify-start h-full md:justify-center">
             <div className="hoz-grid mx-auto grid max-w-2xl grid-cols-1 gap-x-4 lg:gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
               <div className="lg:pt-4 lg:pr-8">
                 <div className="lg:max-w-lg flex flex-col items-center md:items-start">
                   <h2 className="text-base/7 font-semibold text-accent text-center md:text-left">
-                    Modul 1 — Fizionomii
+                    Modul 1 — Arta și forma părului
                   </h2>
                   <p className="mt-2 text-2xl lg:text-4xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-5xl text-center md:text-left">
                     De la anatomia părului până la instrumentele de bază.
                   </p>
                   <p className="mt-6 text-lg/6 lg:text-lg/8 text-gray-700 text-center md:text-left">
-                    Analiză practică a formelor feței și a texturii părului —
-                    identifici tipurile de fizionomie, alegi tunsorile și
-                    tehnicile de styling potrivite pentru fiecare client, pentru
-                    rezultate estetice și funcționale.
+                    Înțelege structura și comportamentul părului, stăpânește
+                    tehnicile fundamentale de tunsoare și descoperă cum forma
+                    influențează rezultatul final — baza esențială pentru orice
+                    stilist profesionist.
                   </p>
                   <ul className="mt-6 space-y-3 text-gray-700 text-lg/4 lg:text-lg/6">
                     <li className="flex items-start gap-3">
                       <strong className="text-indigo-600">•</strong>
-                      <span>
-                        Înțelegerea formelor feței și a tipurilor de păr.
-                      </span>
+                      <span>Arta și forma părului Step by Step.</span>
                     </li>
                     <li className="flex items-start gap-3">
                       <strong className="text-indigo-600">•</strong>
                       <span>
-                        <span>
-                          Tipuri de păr (textură, porozitate, grosime)
-                        </span>
+                        <span>Cele 3 forma in tunsoare Step by Step.</span>
                       </span>
                     </li>
                     <li className="flex items-start gap-3">
                       <strong className="text-indigo-600">•</strong>
-                      <span>Instrumente esențiale și tehnici de bază.</span>
+                      <span>Ridicarea părului.</span>
                     </li>
                     <li className="flex items-start gap-3">
                       <strong className="text-indigo-600">•</strong>
-                      <span>
-                        Principii de tunsori și styling adaptate fizionomiei.
-                      </span>
+                      <span>Tensionarea părului.</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <strong className="text-indigo-600">•</strong>
+                      <span>Coafatul.</span>
                     </li>
                   </ul>
                   <div className="mt-6">
@@ -123,46 +121,54 @@ export default function HorizontalScroll() {
         </div>
 
         <div className="w-screen h-screen panel flex flex-col items-center justify-center gap-6 p-8 ">
-          <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <div className="mx-auto max-w-7xl py-6 md:py-0 px-6 lg:px-8 flex flex-col justify-start h-full md:justify-center">
             <div className="hoz-grid mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
               <div className="lg:pt-4 lg:pr-8">
                 <div className="lg:max-w-lg  flex flex-col items-center md:items-start">
                   <h2 className="text-base/7 font-semibold text-accent text-center md:text-left">
-                    Modul 2 — Fizionomii
+                    Modul 2 — Arta și colorarea părului
                   </h2>
                   <p className="mt-2 text-2xl lg:text-4xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-5xl text-center md:text-left">
-                    De la anatomia părului până la instrumentele de bază.
+                    Tehnici avansate de colorare și nuanțare profesională.
                   </p>
                   <p className="mt-6 text-lg/6 lg:text-lg/8 text-gray-700 text-center md:text-left">
-                    Analiză practică a formelor feței și a texturii părului —
-                    identifici tipurile de fizionomie, alegi tunsorile și
-                    tehnicile de styling potrivite pentru fiecare client, pentru
-                    rezultate estetice și funcționale.
+                    Stăpânește teoria culorii, tehnicile de balayage, ombré și
+                    highlights — învață să creezi nuanțe perfecte, să corectezi
+                    culoarea și să aplici metode moderne de colorare pentru
+                    rezultate spectaculoase și durabile.
                   </p>
                   <ul className="mt-6 space-y-3 text-gray-700 text-lg/4 lg:text-lg/6">
                     <li className="flex items-start gap-3">
                       <strong className="text-indigo-600">•</strong>
                       <span>
-                        Înțelegerea formelor feței și a tipurilor de păr.
+                        Introducere, tehnici de colorare Step by Step.
                       </span>
                     </li>
                     <li className="flex items-start gap-3">
                       <strong className="text-indigo-600">•</strong>
                       <span>
                         <span>
-                          Tipuri de păr (textură, porozitate, grosime)
+                          Prima vopsire și tehnici de nuanțare Step by Step.
                         </span>
                       </span>
                     </li>
                     <li className="flex items-start gap-3">
                       <strong className="text-indigo-600">•</strong>
-                      <span>Instrumente esențiale și tehnici de bază.</span>
+                      <span>Vopsit la rădăcină Step by Step.</span>
                     </li>
                     <li className="flex items-start gap-3">
                       <strong className="text-indigo-600">•</strong>
                       <span>
-                        Principii de tunsori și styling adaptate fizionomiei.
+                        Decoloratul și tehnici de balayage Step by Step.
                       </span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <strong className="text-indigo-600">•</strong>
+                      <span>Pictura pe păr Step by Step.</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <strong className="text-indigo-600">•</strong>
+                      <span>Accente de culoare Step by Step.</span>
                     </li>
                   </ul>
                   <div className="mt-6">
@@ -203,45 +209,55 @@ export default function HorizontalScroll() {
         </div>
 
         <div className="w-screen h-screen panel flex flex-col items-center justify-center gap-6 p-8  text-white">
-          <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <div className="mx-auto max-w-7xl py-6 md:py-0 px-6 lg:px-8 flex flex-col justify-start h-full md:justify-center">
             <div className="hoz-grid mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
-              <div className="lg:pt-4 lg:pr-8">
+              <div className="lg:pt-4 lg:pr-8 flex flex-col justify-center">
                 <div className="lg:max-w-lg flex flex-col items-center md:items-start">
                   <h2 className="text-base/7 font-semibold text-accent text-center md:text-left">
-                    Modul 3 — Fizionomii
+                    Modul 3 — Arta și modelarea părului
                   </h2>
                   <p className="mt-2 text-2xl lg:text-4xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-5xl text-center md:text-left">
-                    De la anatomia părului până la instrumentele de bază.
+                    Tehnici profesionale de styling și coafare avansată.
                   </p>
                   <p className="mt-6 text-lg/6 lg:text-lg/8 text-gray-700 text-center md:text-left">
-                    Analiză practică a formelor feței și a texturii părului —
-                    identifici tipurile de fizionomie, alegi tunsorile și
-                    tehnicile de styling potrivite pentru fiecare client, pentru
-                    rezultate estetice și funcționale.
+                    Descoperă secretele styling-ului profesional: de la
+                    utilizarea corectă a instrumentelor de coafat până la
+                    tehnici avansate de coafare pentru diferite tipuri de păr și
+                    ocazii speciale.
                   </p>
                   <ul className="mt-6 space-y-3 text-gray-700 text-lg/4 lg:text-lg/6">
                     <li className="flex items-start gap-3">
                       <strong className="text-indigo-600">•</strong>
+                      <span>Introducere în lumea creației.</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <strong className="text-indigo-600">•</strong>
+                      <span>Coafatul cu peria plată Step by Step.</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <strong className="text-indigo-600">•</strong>
+                      <span>Coafatul cu peria rotundă Step by Step.</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <strong className="text-indigo-600">•</strong>
+                      <span>Coafatul cu difuzor Step by Step.</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <strong className="text-indigo-600">•</strong>
                       <span>
-                        Înțelegerea formelor feței și a tipurilor de păr.
+                        Creație cu baza in zona superioară Step by Step.
                       </span>
                     </li>
                     <li className="flex items-start gap-3">
                       <strong className="text-indigo-600">•</strong>
                       <span>
-                        <span>
-                          Tipuri de păr (textură, porozitate, grosime)
-                        </span>
+                        Creație cu baza in zona superioară Step by Step.
                       </span>
                     </li>
                     <li className="flex items-start gap-3">
                       <strong className="text-indigo-600">•</strong>
-                      <span>Instrumente esențiale și tehnici de bază.</span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <strong className="text-indigo-600">•</strong>
                       <span>
-                        Principii de tunsori și styling adaptate fizionomiei.
+                        Creație cu baza in zona superioară Step by Step.
                       </span>
                     </li>
                   </ul>
