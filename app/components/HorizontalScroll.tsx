@@ -111,7 +111,7 @@ export default function HorizontalScroll() {
               </div>
               <Image
                 alt="Course image"
-                src={`/cover_photo.jpeg`}
+                src={`/cap-1-image.jpeg`}
                 width={1800}
                 height={1800}
                 className="hoz-img hidden lg:block h-[600px] max-w-none rounded-xl shadow-2xl ring-1 ring-gray-400/10 sm:w-228 md:-ml-4 lg:-ml-0 shadow-[8px_16px_40px_0px_rgba(0,_0,_0,_0.3)]"
@@ -199,7 +199,7 @@ export default function HorizontalScroll() {
               </div>
               <Image
                 alt="Course image"
-                src={`/image12.jpeg`}
+                src={`/cap-2-image.jpeg`}
                 width={1800}
                 height={1800}
                 className="hoz-img hidden lg:block w-3xl h-[600px] max-w-none rounded-xl shadow-2xl ring-1 ring-gray-400/10 sm:w-228 md:-ml-4 lg:-ml-0 shadow-[8px_16px_40px_0px_rgba(0,_0,_0,_0.3)]"
@@ -289,7 +289,7 @@ export default function HorizontalScroll() {
               </div>
               <Image
                 alt="Course image"
-                src={`/image9.jpeg`}
+                src={`/cap-3-image.jpeg`}
                 width={1800}
                 height={1800}
                 className="hoz-img hidden lg:block w-3xl h-[600px] max-w-none rounded-xl shadow-2xl ring-1 ring-gray-400/10 sm:w-228 md:-ml-4 lg:-ml-0 shadow-[8px_16px_40px_0px_rgba(0,_0,_0,_0.3)]"

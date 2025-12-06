@@ -35,7 +35,7 @@ const DesktopNav = () => {
         <ul className="flex justify-center gap-8 py-2 uppercase font-normal text-[16px] text-[#C7C7C7]">
           <li className="hover:text-white">[ACASA]</li>
           <li className="hover:text-white">[DESPRE]</li>
-          <li className="hover:text-white">[CURSURI]</li>
+          <li className="hover:text-white">[CURS]</li>
           <li className="hover:text-white">[CONTACT]</li>
         </ul>
       </div>

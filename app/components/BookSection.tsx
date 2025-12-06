@@ -113,9 +113,9 @@ const BookSection = () => {
             </ul>
 
             <p className="text-md md:text-lg text-muted-foreground leading-relaxed">
-              Tot ce a construit Cristina Grama în ani de experiență, concentrat
-              într-un loc. O resursă pentru hairstyliști, artiști, visători și
-              toți cei care cred că frumusețea se creează, nu se imită.
+              Tot ce a am construit în ani de experiență, am concentrat într-un
+              loc. O resursă pentru hairstyliști, artiști, visători și toți cei
+              care cred că frumusețea se creează, nu se imită.
             </p>
 
             <p className="text-md md:text-lg text-muted-foreground leading-relaxed font-sans">
