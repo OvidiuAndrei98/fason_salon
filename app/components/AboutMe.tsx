@@ -53,7 +53,7 @@ const AboutMe = () => {
           delay={0.1}
           className="w-full pl-2 md:[padding-right:clamp(0.5rem,calc((100vw-1024px)/2),50vw)]"
         >
-          <div className="aspect-3/4 md:aspect-auto flex flex-col gap-2 justify-end p-[32px] bg-[linear-gradient(180deg,rgba(204,204,204,0)_14%,rgba(0,0,0,0.8)_100%),url('/CRISTINA.png')] h-[100%] object-contain bg-center bg-no-repeat bg-cover m-auto md:m-0 md:mb-0 rounded-4xl shadow-[0_0_22px_1px_rgba(0,_0,_0,_0.4)]">
+          <div className="aspect-3/4 md:aspect-auto flex flex-col gap-2 justify-end p-[32px] bg-[linear-gradient(180deg,rgba(204,204,204,0)_14%,rgba(0,0,0,0.8)_100%),url('/CRISTINA.webp')] h-[100%] object-contain bg-center bg-no-repeat bg-cover m-auto md:m-0 md:mb-0 rounded-4xl shadow-[0_0_22px_1px_rgba(0,_0,_0,_0.4)]">
             <div className="flex gap-1 flex-nowrap">
               <span className="bg-[#8484847e] text-foregroud p-[8px] text-[#ececec] rounded-full text-xs whitespace-nowrap">
                 HAIR DESIGN

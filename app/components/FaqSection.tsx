@@ -3,7 +3,7 @@ import FadeContent from "@/components/FadeContent";
 
 const FaqSection = () => {
   return (
-    <div className="py-8 w-full">
+    <div className="pb-8 w-full">
       <FadeContent
         blur={true}
         duration={1000}
