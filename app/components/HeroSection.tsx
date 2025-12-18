@@ -31,7 +31,7 @@ const HeroSection = () => {
             ARTE împletite în PĂR
           </h2>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-center z-10">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-8 items-center z-10">
           <div className="relative w-full flex justify-center items-center md:col-span-7">
             <AnimatedContent
               distance={100}
@@ -53,14 +53,18 @@ const HeroSection = () => {
               />
             </AnimatedContent>
           </div>
-          <FadeContent className="flex flex-col gap-6 mb-[32px] md:col-span-5 z-30">
-            <Image
+          <FadeContent className="flex flex-col gap-4 mb-[32px] md:col-span-5 z-30">
+            {/* <Image
               src="/mask-text.svg"
               alt="hero-image"
               width={800}
               height={800}
               className="brightness-220 hidden md:block w-[300px] lg:w-[400px] md:scale-[1.1]"
-            />
+            /> */}
+            <h1 className="text-white text-4xl lg:text-5xl md:text-start text-center">
+              Curs Hairdesign <br /> Masterclass: Tehnică, Forma, Estetică și
+              Viziune
+            </h1>
 
             <span className="text-center font-sans text-md  md:text-start text-base text-white leading-relaxed">
               Pentru mine, părul nu este doar tehnică. Este o formă de

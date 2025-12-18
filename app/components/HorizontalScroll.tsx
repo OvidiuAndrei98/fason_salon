@@ -18,7 +18,7 @@ export default function HorizontalScroll() {
   gsap.registerPlugin(ScrollTrigger);
 
   useEffect(() => {
-    let panels = gsap.utils.toArray(".panel");
+    const panels = gsap.utils.toArray(".panel");
     gsap.to(panels, {
       xPercent: -100 * (panels.length - 1),
       ease: "none",
@@ -43,11 +43,11 @@ export default function HorizontalScroll() {
         className="w-[600vw] h-screen flex flex-wrap relative overflow-hidden"
       >
         <div className="w-screen h-screen panel flex flex-col items-center justify-center gap-6 p-8 ">
-          <div className="mx-auto max-w-7xl py-6 md:py-0 px-6 lg:px-8 flex flex-col justify-start h-full md:justify-center">
+          <div className="mx-auto max-w-7xl py-6 md:py-0 px-6 lg:px-8 flex flex-col justify-center h-full md:justify-center">
             <div className="hoz-grid mx-auto grid max-w-2xl grid-cols-1 gap-x-4 lg:gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
               <div className="lg:pt-4 lg:pr-8">
                 <div className="lg:max-w-lg flex flex-col items-center md:items-start">
-                  <h2 className="text-base/7 font-semibold text-accent text-center md:text-left">
+                  <h2 className=" font-semibold text-2xl text-accent text-center md:text-left tracking-wide">
                     Modul 1 — Arta și forma părului
                   </h2>
                   <p className="mt-2 text-2xl lg:text-4xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-5xl text-center md:text-left">
@@ -83,11 +83,11 @@ export default function HorizontalScroll() {
                       <span>Coafatul.</span>
                     </li>
                   </ul>
-                  <div className="mt-6">
+                  <div className="mt-6 flex flex-col gap-2">
                     <Button
                       onClick={async () => {
                         const isInCart = cart?.items.find(
-                          (item) => item.id === "book_001"
+                          (item) => item.id === "module_001"
                         );
                         if (!isInCart) {
                           cart?.addItem({
@@ -106,6 +106,9 @@ export default function HorizontalScroll() {
                     >
                       Cumpără Modul 1
                     </Button>
+                    <span className="text-sm text-muted-foreground text-center">
+                      Modulul va fi livrat in format digital (PDF) prin email.
+                    </span>
                   </div>
                 </div>
               </div>
@@ -121,11 +124,11 @@ export default function HorizontalScroll() {
         </div>
 
         <div className="w-screen h-screen panel flex flex-col items-center justify-center gap-6 p-8 ">
-          <div className="mx-auto max-w-7xl py-6 md:py-0 px-6 lg:px-8 flex flex-col justify-start h-full md:justify-center">
+          <div className="mx-auto max-w-7xl py-6 md:py-0 px-6 lg:px-8 flex flex-col justify-center h-full md:justify-center">
             <div className="hoz-grid mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
               <div className="lg:pt-4 lg:pr-8">
                 <div className="lg:max-w-lg  flex flex-col items-center md:items-start">
-                  <h2 className="text-base/7 font-semibold text-accent text-center md:text-left">
+                  <h2 className="text-2xl font-semibold text-accent text-center md:text-left tracking-wide">
                     Modul 2 — Arta și colorarea părului
                   </h2>
                   <p className="mt-2 text-2xl lg:text-4xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-5xl text-center md:text-left">
@@ -171,7 +174,7 @@ export default function HorizontalScroll() {
                       <span>Accente de culoare Step by Step.</span>
                     </li>
                   </ul>
-                  <div className="mt-6">
+                  <div className="mt-6 flex flex-col gap-2">
                     <Button
                       onClick={async () => {
                         const isInCart = cart?.items.find(
@@ -194,6 +197,9 @@ export default function HorizontalScroll() {
                     >
                       Cumpără Modul 2
                     </Button>
+                    <span className="text-sm text-muted-foreground text-center">
+                      Modulul va fi livrat in format digital (PDF) prin email.
+                    </span>
                   </div>
                 </div>
               </div>
@@ -209,11 +215,11 @@ export default function HorizontalScroll() {
         </div>
 
         <div className="w-screen h-screen panel flex flex-col items-center justify-center gap-6 p-8  text-white">
-          <div className="mx-auto max-w-7xl py-6 md:py-0 px-6 lg:px-8 flex flex-col justify-start h-full md:justify-center">
+          <div className="mx-auto max-w-7xl py-6 md:py-0 px-6 lg:px-8 flex flex-col justify-center h-full md:justify-center">
             <div className="hoz-grid mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
               <div className="lg:pt-4 lg:pr-8 flex flex-col justify-center">
                 <div className="lg:max-w-lg flex flex-col items-center md:items-start">
-                  <h2 className="text-base/7 font-semibold text-accent text-center md:text-left">
+                  <h2 className="text-2xl font-semibold text-accent text-center md:text-left tracking-wide">
                     Modul 3 — Arta și modelarea părului
                   </h2>
                   <p className="mt-2 text-2xl lg:text-4xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-5xl text-center md:text-left">
@@ -261,7 +267,7 @@ export default function HorizontalScroll() {
                       </span>
                     </li>
                   </ul>
-                  <div className="mt-6">
+                  <div className="mt-6 flex flex-col gap-2">
                     <Button
                       onClick={async () => {
                         const isInCart = cart?.items.find(
@@ -284,6 +290,9 @@ export default function HorizontalScroll() {
                     >
                       Cumpără Modul 3
                     </Button>
+                    <span className="text-sm text-muted-foreground text-center">
+                      Modulul va fi livrat in format digital (PDF) prin email.
+                    </span>
                   </div>
                 </div>
               </div>

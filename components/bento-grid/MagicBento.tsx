@@ -52,10 +52,10 @@ const cardData: BentoCardProps[] = [
   },
   {
     color: "transparent",
-    title: "Business în Hairstyling",
+    title: "Dezvoltare Artistică",
     description:
-      "Strategii pentru dezvoltarea unei cariere de succes în beauty.",
-    label: "Business",
+      "Idei care pot ajunge concepte si colectii cu ajutorul tehnicilor din curs.",
+    label: "Artă",
   },
   {
     color: "transparent",
@@ -753,12 +753,12 @@ const MagicBento: React.FC<BentoProps> = ({
                   </div>
                   <div className="card__content flex flex-col relative text-black">
                     <h3
-                      className={`card__title font-normal text-heading m-0 mb-1`}
+                      className={`card__title font-normal text-2xl text-heading m-0 mb-1`}
                     >
                       {card.title}
                     </h3>
                     <p
-                      className={`card__description text-sm leading-5 opacity-90`}
+                      className={`card__description  text-base leading-5 opacity-90`}
                     >
                       {card.description}
                     </p>
