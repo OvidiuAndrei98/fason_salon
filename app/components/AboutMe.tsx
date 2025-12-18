@@ -15,13 +15,13 @@ const AboutMe = () => {
         </h2>
       </FadeContent>
 
-      <div className="w-full flex flex-col pr-2 md:pr-0 md:flex-row gap-6 md:gap-4 lg:gap-10">
+      <div className="w-full flex flex-col pr-[32px] md:flex-row gap-6 md:gap-4 lg:gap-10">
         <FadeContent
           blur={true}
           duration={1000}
           easing="ease-out"
           initialOpacity={0}
-          className="bg-accent/15 p-4 md:p-0 flex flex-col gap-4 items-center md:items-start md:[padding-left:clamp(0.5rem,calc((100vw-1024px)/2),50vw)] md:pr-[50px] md:py-[50px] text-xl rounded-tr-4xl rounded-br-4xl"
+          className="bg-accent/15 p-4 md:p-0 flex flex-col gap-4 items-center md:items-start md:[padding-left:clamp(32px,calc((100vw-1024px)/2),50vw)] md:pr-[50px] md:py-[50px] text-xl rounded-tr-4xl rounded-br-4xl"
         >
           <h2 className="text-secondary-foreground font-heading text-3xl font-extrabold tracking-wide">
             CHRISTINA GRAMMA

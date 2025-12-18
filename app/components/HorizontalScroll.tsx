@@ -37,7 +37,7 @@ export default function HorizontalScroll() {
   }, [component]);
 
   return (
-    <div ref={component}>
+    <div ref={component} className="overflow-hidden">
       <div
         ref={slider}
         className="w-[600vw] h-screen flex flex-wrap relative overflow-hidden"
@@ -67,7 +67,7 @@ export default function HorizontalScroll() {
                     <li className="flex items-start gap-3">
                       <strong className="text-indigo-600">•</strong>
                       <span>
-                        <span>Cele 3 forma in tunsoare Step by Step.</span>
+                        <span>Cele 3 forme în tunsoare Step by Step.</span>
                       </span>
                     </li>
                     <li className="flex items-start gap-3">

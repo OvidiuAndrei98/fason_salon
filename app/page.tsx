@@ -7,12 +7,12 @@ import HorizontalScroll from "./components/HorizontalScroll";
 import PhotosSection from "./components/PhotosSection";
 export default function Home() {
   return (
-    <div className="w-full overflow-x-hidden">
+    <div className="w-full ">
       <HeroSection />
       <AboutMe />
       <BookSection />
+      {/* <PhotosSection /> */}
       <HorizontalScroll />
-      <PhotosSection />
       <HairSalon />
       <FaqSection />
     </div>

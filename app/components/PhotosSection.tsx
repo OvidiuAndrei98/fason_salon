@@ -2,7 +2,7 @@ import DomeGallery from "@/components/globe-carousel/GlobeCarousel";
 
 const PhotosSection = () => {
   return (
-    <div style={{ width: "100vw", height: "70vh" }}>
+    <div style={{ width: "100%", height: "70vh", overflow: "hidden" }}>
       <DomeGallery
         fit={1}
         grayscale={false}

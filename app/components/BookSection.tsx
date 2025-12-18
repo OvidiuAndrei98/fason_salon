@@ -11,7 +11,7 @@ import MagicBento from "@/components/bento-grid/MagicBento";
 const BookSection = () => {
   const cart = useCart();
   return (
-    <div className="w-full flex flex-col items-center max-w-[1024px] mx-auto px-2 ">
+    <div className="w-full flex flex-col items-center max-w-[1024px] mx-auto px-[48px] lg:px-[32px]">
       <FadeContent
         blur={true}
         duration={1000}
@@ -24,77 +24,6 @@ const BookSection = () => {
       </FadeContent>
 
       <div className="w-full ">
-        <div className="grid md:grid-cols-2 md:grid-rows-1 gap-4 lg:gap-6 ">
-          <AnimatedContent
-            distance={150}
-            direction="horizontal"
-            reverse={true}
-            duration={1.2}
-            ease="power3.out"
-            initialOpacity={0.2}
-            animateOpacity
-            scale={1.1}
-            threshold={0.2}
-            delay={0.3}
-          >
-            <Image
-              src={Carte}
-              alt="Book Cover"
-              className="w-full md:max-w-sm mx-auto "
-            />
-          </AnimatedContent>
-          <FadeContent
-            blur={true}
-            duration={1000}
-            easing="ease-out"
-            initialOpacity={0}
-            className="flex flex-col p-[30px] items-center rounded-[32px] bg-[#5f67ff24] justify-center gap-[var(--spacing-s)] md:gap-[var(--spacing-m)]"
-          >
-            <h2 className="text-secondary-foreground font-heading text-3xl font-extrabold tracking-wide">
-              CURS COMPLET
-            </h2>
-            <p className="text-base md:text-base text-center">
-              Am scris acest curs cu gândul la materialele pe care eu însămi le
-              căutam. Dedicată practicii și studiului, ea explorează coafura
-              prin artă, psihologie, istorie, spiritualitate și comunicare.
-            </p>
-            <div className="flex flex-col items-center gap-3">
-              <div className="flex items-center gap-3">
-                <span className="text-lg text-muted-foreground line-through">
-                  199.99 lei
-                </span>
-                <span className="text-3xl font-extrabold text-accent">
-                  149.99 lei
-                </span>
-              </div>
-            </div>
-            <span className="text-sm text-muted-foreground text-center">
-              Cursul va fi livrat in format digital (PDF) prin email.
-            </span>
-            <Button
-              className="p-7 rounded self-center text-xl bg-foreground text-background hover:bg-accent active:bg-accent hover:text-secondary-background"
-              onClick={async () => {
-                const isInCart = cart?.items.find(
-                  (item) => item.id === "book_001"
-                );
-                if (!isInCart) {
-                  cart?.addItem({
-                    id: "book_001",
-                    name: "Arte împletite în păr - Curs complet",
-                    price: 149.99,
-                    priceId: "price_1SXXbpK51mlAswumLSp0IRJI",
-                    quantity: 1,
-                  });
-                  toast.info("Produsul a fost adăugat în coș.");
-                } else {
-                  toast.info("Produsul este deja în coș.");
-                }
-              }}
-            >
-              Cumpară
-            </Button>
-          </FadeContent>
-        </div>
         <FadeContent
           blur={true}
           duration={1000}
@@ -102,103 +31,367 @@ const BookSection = () => {
           initialOpacity={0}
           className="flex flex-col gap-6 "
         >
-          {" "}
-          <div className="relative isolate overflow-hidden  px-6 py-24 sm:py-32 lg:overflow-visible lg:px-0">
-            <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 lg:mx-0 lg:max-w-none lg:grid-cols-2 lg:items-start lg:gap-y-10">
-              <div className="lg:col-span-2 lg:col-start-1 lg:row-start-1 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8">
+          <div className="relative isolate overflow-hidden  px-6 py-12 sm:py-12 lg:overflow-visible lg:px-0">
+            <div className="grid grid-cols-1 gap-x-0 gap-y-16 lg:mx-0 lg:max-w-none lg:grid-cols-2 lg:items-start lg:gap-y-10">
+              <div className="lg:col-span-2 lg:col-start-1 lg:row-start-1 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8">
                 <div className="lg:pr-4">
                   <div className="lg:max-w-lg">
                     <p className="text-base/7 font-semibold text-indigo-600">
-                      Deploy faster
+                      Christina Gramma
                     </p>
                     <h1 className="mt-2 text-4xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-5xl">
-                      A better workflow
+                      Arte Impletite in par - Curs complet
                     </h1>
                     <p className="mt-6 text-xl/8 text-gray-700">
-                      Aliquet nec orci mattis amet quisque ullamcorper neque,
-                      nibh sem. At arcu, sit dui mi, nibh dui, diam eget
-                      aliquam. Quisque id at vitae feugiat egestas.
+                      Am scris acest curs cu gândul la materialele pe care eu
+                      însămi le căutam. Dedicată practicii și studiului, ea
+                      explorează coafura prin artă, psihologie, istorie,
+                      spiritualitate și comunicare.
                     </p>
                   </div>
                 </div>
               </div>
-              <div className="-mt-12 -ml-12 p-12 lg:sticky lg:top-4 lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:overflow-hidden">
-                <img
-                  alt=""
-                  src="https://tailwindcss.com/plus-assets/img/component-images/dark-project-app-screenshot.png"
-                  className="w-3xl max-w-none rounded-xl bg-gray-900 shadow-xl ring-1 ring-gray-400/10 sm:w-228"
-                />
+              <div className="-mt-12 p-12 pr-0 lg:sticky lg:top-4 lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:overflow-hidden max-w-[400px] mx-auto md:max-w-full">
+                <div className="flex flex-col  bg-[#5f67ff24] rounded-3xl border border-[#5f67ff44] backdrop-blur-md shadow-lg ">
+                  <AnimatedContent
+                    distance={150}
+                    direction="horizontal"
+                    reverse={true}
+                    duration={1.2}
+                    ease="power3.out"
+                    initialOpacity={0.2}
+                    animateOpacity
+                    scale={1.1}
+                    threshold={0.2}
+                    delay={0.3}
+                  >
+                    <Image
+                      src={Carte}
+                      alt="Book Cover"
+                      className="w-full md:max-w-sm mx-auto "
+                    />
+                  </AnimatedContent>
+                  <FadeContent
+                    blur={true}
+                    duration={1000}
+                    easing="ease-out"
+                    initialOpacity={0}
+                    className="flex flex-col p-[30px] items-center rounded-[32px] justify-center gap-[var(--spacing-s)] md:gap-[var(--spacing-m)]"
+                  >
+                    <div className="flex flex-col items-center gap-3">
+                      <div className="flex items-center gap-3">
+                        <span className="text-lg text-muted-foreground line-through">
+                          199.99 lei
+                        </span>
+                        <span className="text-3xl font-extrabold text-accent">
+                          149.99 lei
+                        </span>
+                      </div>
+                    </div>
+                    <span className="text-sm text-muted-foreground text-center">
+                      Cursul va fi livrat in format digital (PDF) prin email.
+                    </span>
+                    <Button
+                      className="p-7 rounded self-center text-xl bg-foreground text-background hover:bg-accent active:bg-accent hover:text-secondary-background"
+                      onClick={async () => {
+                        const isInCart = cart?.items.find(
+                          (item) => item.id === "book_001"
+                        );
+                        if (!isInCart) {
+                          cart?.addItem({
+                            id: "book_001",
+                            name: "Arte împletite în păr - Curs complet",
+                            price: 149.99,
+                            priceId: "price_1SXXbpK51mlAswumLSp0IRJI",
+                            quantity: 1,
+                          });
+                          toast.info("Produsul a fost adăugat în coș.");
+                        } else {
+                          toast.info("Produsul este deja în coș.");
+                        }
+                      }}
+                    >
+                      Cumpară
+                    </Button>
+                  </FadeContent>
+                </div>
               </div>
-              <div className="lg:col-span-2 lg:col-start-1 lg:row-start-2 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8">
+              <div className="lg:col-span-2 lg:col-start-1 lg:row-start-2 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8">
                 <div className="lg:pr-4">
-                  <div className="max-w-xl text-base/7 text-gray-600 lg:max-w-lg">
+                  <div className="w-full text-base/7 text-gray-600 lg:max-w-lg">
                     <p>
-                      Faucibus commodo massa rhoncus, volutpat. Dignissim sed
-                      eget risus enim. Mattis mauris semper sed amet vitae sed
-                      turpis id. Id dolor praesent donec est. Odio penatibus
-                      risus viverra tellus varius sit neque erat velit. Faucibus
-                      commodo massa rhoncus, volutpat. Dignissim sed eget risus
-                      enim. Mattis mauris semper sed amet vitae sed turpis id.
+                      Acest curs este răspunsul la toate întrebările pe care
+                      le-am avut și eu la început de drum. Este o resursă creată
+                      pentru a transforma curiozitatea în competență reală:{" "}
+                      <span className="font-semibold text-accent">
+                        vei învăța de la zero tehnicile de bază, explicate
+                        minuțios și aplicate practic
+                      </span>
+                      , astfel încât să ai o fundație tehnică imbatabilă. Dar,
+                      dincolo de mecanică, te invit să descoperi coafura ca pe
+                      un limbaj complex. Vom explora împreună cum psihologia,
+                      istoria și spiritualitatea se întâlnesc în fiecare
+                      mișcare, transformând simplul act de a coafa într-o formă
+                      autentică de artă și comunicare.{" "}
+                      <span className="font-semibold text-accent">
+                        Este ghidul complet
+                      </span>{" "}
+                      care îți oferă atât precizia tehnică, cât și profunzimea
+                      creativă de care ai nevoie pentru a profesa cu încredere.
                     </p>
-                    <ul role="list" className="mt-8 space-y-8 text-gray-600">
-                      <li className="flex gap-x-3">
-                        <span>
-                          <strong className="font-semibold text-gray-900">
-                            Push to deploy.
-                          </strong>{" "}
-                          Lorem ipsum, dolor sit amet consectetur adipisicing
-                          elit. Maiores impedit perferendis suscipit eaque, iste
-                          dolor cupiditate blanditiis ratione.
-                        </span>
-                      </li>
-                      <li className="flex gap-x-3">
-                        <span>
-                          <strong className="font-semibold text-gray-900">
-                            SSL certificates.
-                          </strong>{" "}
-                          Anim aute id magna aliqua ad ad non deserunt sunt. Qui
-                          irure qui lorem cupidatat commodo.
-                        </span>
-                      </li>
-                      <li className="flex gap-x-3">
-                        <span>
-                          <strong className="font-semibold text-gray-900">
-                            Database backups.
-                          </strong>{" "}
-                          Ac tincidunt sapien vehicula erat auctor pellentesque
-                          rhoncus. Et magna sit morbi lobortis.
-                        </span>
-                      </li>
-                    </ul>
-                    <p className="mt-8">
-                      Et vitae blandit facilisi magna lacus commodo. Vitae
-                      sapien duis odio id et. Id blandit molestie auctor
-                      fermentum dignissim. Lacus diam tincidunt ac cursus in
-                      vel. Mauris varius vulputate et ultrices hac adipiscing
-                      egestas. Iaculis convallis ac tempor et ut. Ac lorem vel
-                      integer orci.
-                    </p>
+                    <div className="space-y-4 mt-4">
+                      <div className="bg-gradient-to-br from-accent/10 to-accent/5 rounded-lg shadow-md border border-accent/20 backdrop-blur-sm">
+                        <details className="group" name="acordeon-curs">
+                          <summary className="flex items-center justify-between p-6 cursor-pointer hover:bg-accent/5 transition-colors h-[60px]">
+                            <div className="flex items-center">
+                              <span className="text-2xl font-bold text-accent mr-3">
+                                01
+                              </span>
+                              <h3 className="text-lg font-semibold text-secondary-foreground font-sans">
+                                Fzionomiile Părului
+                              </h3>
+                            </div>
+                            <svg
+                              className="w-5 h-5 text-accent transition-transform group-open:rotate-180"
+                              fill="none"
+                              stroke="currentColor"
+                              viewBox="0 0 24 24"
+                            >
+                              <path
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                strokeWidth={2}
+                                d="M19 9l-7 7-7-7"
+                              />
+                            </svg>
+                          </summary>
+                          <div className="px-6 pb-6">
+                            <p className="text-muted-foreground mb-3">
+                              Cum citești forma feței, direcția firelor, volumul
+                              natural și cum creezi proporții corecte.
+                            </p>
+                          </div>
+                        </details>
+                      </div>
+
+                      <div className="bg-gradient-to-br from-accent/10 to-accent/5 rounded-lg shadow-md border border-accent/20 backdrop-blur-sm">
+                        <details className="group" name="acordeon-curs">
+                          <summary className="flex items-center justify-between p-6 cursor-pointer hover:bg-accent/5 transition-colors h-[60px]">
+                            <div className="flex items-center">
+                              <span className="text-2xl font-bold text-accent mr-3">
+                                02
+                              </span>
+                              <h3 className="text-lg font-semibold text-secondary-foreground font-sans">
+                                Comunicare
+                              </h3>
+                            </div>
+                            <svg
+                              className="w-5 h-5 text-accent transition-transform group-open:rotate-180"
+                              fill="none"
+                              stroke="currentColor"
+                              viewBox="0 0 24 24"
+                            >
+                              <path
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                strokeWidth={2}
+                                d="M19 9l-7 7-7-7"
+                              />
+                            </svg>
+                          </summary>
+                          <div className="px-6 pb-6">
+                            <p className="text-muted-foreground mb-3">
+                              Întrebări simple, rezultate clare. Cum afli ce își
+                              dorește cu adevărat clientul.
+                            </p>
+                          </div>
+                        </details>
+                      </div>
+
+                      <div className="bg-gradient-to-br from-accent/10 to-accent/5 rounded-lg shadow-md border border-accent/20 backdrop-blur-sm">
+                        <details className="group" name="acordeon-curs">
+                          <summary className="flex items-center justify-between p-6 cursor-pointer hover:bg-accent/5 transition-colors h-[60px]">
+                            <div className="flex items-center">
+                              <span className="text-2xl font-bold text-accent mr-3">
+                                03
+                              </span>
+                              <h3 className="text-lg font-semibold text-secondary-foreground font-sans">
+                                Arta si forma
+                              </h3>
+                            </div>
+                            <svg
+                              className="w-5 h-5 text-accent transition-transform group-open:rotate-180"
+                              fill="none"
+                              stroke="currentColor"
+                              viewBox="0 0 24 24"
+                            >
+                              <path
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                strokeWidth={2}
+                                d="M19 9l-7 7-7-7"
+                              />
+                            </svg>
+                          </summary>
+                          <div className="px-6 pb-6">
+                            <p className="text-muted-foreground mb-3">
+                              Proporții, linii, echilibru, detalii invizibile
+                              care schimbă tot.
+                            </p>
+                          </div>
+                        </details>
+                      </div>
+
+                      <div className="bg-gradient-to-br from-accent/10 to-accent/5 rounded-lg shadow-md border border-accent/20 backdrop-blur-sm">
+                        <details className="group" name="acordeon-curs">
+                          <summary className="flex items-center justify-between p-6 cursor-pointer hover:bg-accent/5 transition-colors h-[60px]">
+                            <div className="flex items-center">
+                              <span className="text-2xl font-bold text-accent mr-3">
+                                04
+                              </span>
+                              <h3 className="text-lg font-semibold text-secondary-foreground font-sans">
+                                Arta si culoare
+                              </h3>
+                            </div>
+                            <svg
+                              className="w-5 h-5 text-accent transition-transform group-open:rotate-180"
+                              fill="none"
+                              stroke="currentColor"
+                              viewBox="0 0 24 24"
+                            >
+                              <path
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                strokeWidth={2}
+                                d="M19 9l-7 7-7-7"
+                              />
+                            </svg>
+                          </summary>
+                          <div className="px-6 pb-6">
+                            <p className="text-muted-foreground mb-3">
+                              Subtonuri, reflexe, culoare potrivită pentru
+                              identitatea fiecărui om.
+                            </p>
+                          </div>
+                        </details>
+                      </div>
+
+                      <div className="bg-gradient-to-br from-accent/10 to-accent/5 rounded-lg shadow-md border border-accent/20 backdrop-blur-sm">
+                        <details className="group" name="acordeon-curs">
+                          <summary className="flex items-center justify-between p-6 cursor-pointer hover:bg-accent/5 transition-colors h-[60px]">
+                            <div className="flex items-center">
+                              <span className="text-2xl font-bold text-accent mr-3">
+                                05
+                              </span>
+                              <h3 className="text-lg font-semibold text-secondary-foreground font-sans">
+                                Decoloratul
+                              </h3>
+                            </div>
+                            <svg
+                              className="w-5 h-5 text-accent transition-transform group-open:rotate-180"
+                              fill="none"
+                              stroke="currentColor"
+                              viewBox="0 0 24 24"
+                            >
+                              <path
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                strokeWidth={2}
+                                d="M19 9l-7 7-7-7"
+                              />
+                            </svg>
+                          </summary>
+                          <div className="px-6 pb-6">
+                            <p className="text-muted-foreground mb-3">
+                              Pași logici, tehnici sigure, cum protejezi firul
+                              și eviți greșelile.
+                            </p>
+                          </div>
+                        </details>
+                      </div>
+
+                      <div className="bg-gradient-to-br from-accent/10 to-accent/5 rounded-lg shadow-md border border-accent/20 backdrop-blur-sm">
+                        <details className="group" name="acordeon-curs">
+                          <summary className="flex items-center justify-between p-6 cursor-pointer hover:bg-accent/5 transition-colors h-[60px]">
+                            <div className="flex items-center">
+                              <span className="text-2xl font-bold text-accent mr-3">
+                                06
+                              </span>
+                              <h3 className="text-lg font-semibold text-secondary-foreground font-sans">
+                                Arta si modelarea parului
+                              </h3>
+                            </div>
+                            <svg
+                              className="w-5 h-5 text-accent transition-transform group-open:rotate-180"
+                              fill="none"
+                              stroke="currentColor"
+                              viewBox="0 0 24 24"
+                            >
+                              <path
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                strokeWidth={2}
+                                d="M19 9l-7 7-7-7"
+                              />
+                            </svg>
+                          </summary>
+                          <div className="px-6 pb-6">
+                            <p className="text-muted-foreground mb-3">
+                              Coafuri simple și complexe, structuri, volum și
+                              expresivitate.
+                            </p>
+                          </div>
+                        </details>
+                      </div>
+
+                      <div className="bg-gradient-to-br from-accent/10 to-accent/5 rounded-lg shadow-md border border-accent/20 backdrop-blur-sm">
+                        <details className="group" name="acordeon-curs">
+                          <summary className="flex items-center justify-between p-6 cursor-pointer hover:bg-accent/5 transition-colors h-[60px]">
+                            <div className="flex items-center">
+                              <span className="text-2xl font-bold text-accent mr-3">
+                                07
+                              </span>
+                              <h3 className="text-lg font-semibold text-secondary-foreground font-sans">
+                                Concepte
+                              </h3>
+                            </div>
+                            <svg
+                              className="w-5 h-5 text-accent transition-transform group-open:rotate-180"
+                              fill="none"
+                              stroke="currentColor"
+                              viewBox="0 0 24 24"
+                            >
+                              <path
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                strokeWidth={2}
+                                d="M19 9l-7 7-7-7"
+                              />
+                            </svg>
+                          </summary>
+                          <div className="px-6 pb-6">
+                            <p className="text-muted-foreground mb-3">
+                              Psihologie, simbolistică, estetică — fundația unei
+                              imagini reușite.
+                            </p>
+                          </div>
+                        </details>
+                      </div>
+                    </div>
                     <h2 className="mt-16 text-2xl font-bold tracking-tight text-gray-900">
-                      No server? No problem.
+                      Nu vrei tot Cursul?.
                     </h2>
                     <p className="mt-6">
-                      Id orci tellus laoreet id ac. Dolor, aenean leo, ac etiam
-                      consequat in. Convallis arcu ipsum urna nibh. Pharetra,
-                      euismod vitae interdum mauris enim, consequat vulputate
-                      nibh. Maecenas pellentesque id sed tellus mauris, ultrices
-                      mauris. Tincidunt enim cursus ridiculus mi. Pellentesque
-                      nam sed nullam sed diam turpis ipsum eu a sed convallis
-                      diam.
+                      Fiecare capitol poate fi achiziționat și separat, la un
+                      preț special. Ideal dacă vrei să aprofundezi doar anumite
+                      tehnici sau concepte.
                     </p>
                   </div>
                 </div>
               </div>
             </div>
-          </div>{" "}
+          </div>
         </FadeContent>
-        {/* <div className="bg-[url('/image25.webp')] h-[450px] md:h-[400px] bg-cover bg-center bg-no-repeat shadow-lg rounded-lg min-h-[300px] max-h-[450px] md:max-h-[400px] md:max-w-[360px] md:w-[300px] relative overflow-hidden md:justify-self-end self-center">
-          <div className="absolute inset-0 bg-black/30 rounded-lg"></div>
-        </div> */}
       </div>
       <FadeContent
         blur={true}
@@ -225,243 +418,6 @@ const BookSection = () => {
         <h2 className="font-heading text-3xl md:text-4xl py-[30px] md:py-[50px] font-extrabold tracking-wide bg-gradient-to-r from-slate-700 via-gray-500 to-slate-700 bg-clip-text text-transparent text-center">
           CAPITOLE
         </h2>
-        <div className="space-y-4">
-          <div className="bg-gradient-to-br from-accent/10 to-accent/5 rounded-lg shadow-md border border-accent/20 backdrop-blur-sm">
-            <details className="group">
-              <summary className="flex items-center justify-between p-6 cursor-pointer hover:bg-accent/5 transition-colors h-[60px]">
-                <div className="flex items-center">
-                  <span className="text-2xl font-bold text-accent mr-3">
-                    01
-                  </span>
-                  <h3 className="text-lg font-semibold text-secondary-foreground font-sans">
-                    Fzionomiile Părului
-                  </h3>
-                </div>
-                <svg
-                  className="w-5 h-5 text-accent transition-transform group-open:rotate-180"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M19 9l-7 7-7-7"
-                  />
-                </svg>
-              </summary>
-              <div className="px-6 pb-6">
-                <p className="text-muted-foreground mb-3">
-                  Cum citești forma feței, direcția firelor, volumul natural și
-                  cum creezi proporții corecte.
-                </p>
-              </div>
-            </details>
-          </div>
-
-          <div className="bg-gradient-to-br from-accent/10 to-accent/5 rounded-lg shadow-md border border-accent/20 backdrop-blur-sm">
-            <details className="group">
-              <summary className="flex items-center justify-between p-6 cursor-pointer hover:bg-accent/5 transition-colors h-[60px]">
-                <div className="flex items-center">
-                  <span className="text-2xl font-bold text-accent mr-3 ">
-                    02
-                  </span>
-                  <h3 className="text-lg font-semibold text-secondary-foreground font-sans">
-                    Comunicare
-                  </h3>
-                </div>
-                <svg
-                  className="w-5 h-5 text-accent transition-transform group-open:rotate-180"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M19 9l-7 7-7-7"
-                  />
-                </svg>
-              </summary>
-              <div className="px-6 pb-6">
-                <p className="text-muted-foreground mb-3">
-                  Întrebări simple, rezultate clare. Cum afli ce își dorește cu
-                  adevărat clientul.
-                </p>
-              </div>
-            </details>
-          </div>
-
-          <div className="bg-gradient-to-br from-accent/10 to-accent/5 rounded-lg shadow-md border border-accent/20 backdrop-blur-sm">
-            <details className="group">
-              <summary className="flex items-center justify-between p-6 cursor-pointer hover:bg-accent/5 transition-colors h-[60px]">
-                <div className="flex items-center">
-                  <span className="text-2xl font-bold text-accent mr-3">
-                    03
-                  </span>
-                  <h3 className="text-lg font-semibold text-secondary-foreground font-sans">
-                    Arta si forma
-                  </h3>
-                </div>
-                <svg
-                  className="w-5 h-5 text-accent transition-transform group-open:rotate-180"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M19 9l-7 7-7-7"
-                  />
-                </svg>
-              </summary>
-              <div className="px-6 pb-6">
-                <p className="text-muted-foreground mb-3">
-                  Proporții, linii, echilibru, detalii invizibile care schimbă
-                  tot.
-                </p>
-              </div>
-            </details>
-          </div>
-
-          <div className="bg-gradient-to-br from-accent/10 to-accent/5 rounded-lg shadow-md border border-accent/20 backdrop-blur-sm">
-            <details className="group">
-              <summary className="flex items-center justify-between p-6 cursor-pointer hover:bg-accent/5 transition-colors h-[60px]">
-                <div className="flex items-center">
-                  <span className="text-2xl font-bold text-accent mr-3">
-                    04
-                  </span>
-                  <h3 className="text-lg font-semibold text-secondary-foreground font-sans">
-                    Arta si culoare
-                  </h3>
-                </div>
-                <svg
-                  className="w-5 h-5 text-accent transition-transform group-open:rotate-180"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M19 9l-7 7-7-7"
-                  />
-                </svg>
-              </summary>
-              <div className="px-6 pb-6">
-                <p className="text-muted-foreground mb-3">
-                  Subtonuri, reflexe, culoare potrivită pentru identitatea
-                  fiecărui om.
-                </p>
-              </div>
-            </details>
-          </div>
-
-          <div className="bg-gradient-to-br from-accent/10 to-accent/5 rounded-lg shadow-md border border-accent/20 backdrop-blur-sm">
-            <details className="group">
-              <summary className="flex items-center justify-between p-6 cursor-pointer hover:bg-accent/5 transition-colors h-[60px]">
-                <div className="flex items-center">
-                  <span className="text-2xl font-bold text-accent mr-3">
-                    05
-                  </span>
-                  <h3 className="text-lg font-semibold text-secondary-foreground font-sans">
-                    Decoloratul
-                  </h3>
-                </div>
-                <svg
-                  className="w-5 h-5 text-accent transition-transform group-open:rotate-180"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M19 9l-7 7-7-7"
-                  />
-                </svg>
-              </summary>
-              <div className="px-6 pb-6">
-                <p className="text-muted-foreground mb-3">
-                  Pași logici, tehnici sigure, cum protejezi firul și eviți
-                  greșelile.
-                </p>
-              </div>
-            </details>
-          </div>
-
-          <div className="bg-gradient-to-br from-accent/10 to-accent/5 rounded-lg shadow-md border border-accent/20 backdrop-blur-sm">
-            <details className="group">
-              <summary className="flex items-center justify-between p-6 cursor-pointer hover:bg-accent/5 transition-colors h-[60px]">
-                <div className="flex items-center">
-                  <span className="text-2xl font-bold text-accent mr-3">
-                    06
-                  </span>
-                  <h3 className="text-lg font-semibold text-secondary-foreground font-sans">
-                    Arta si modelarea parului
-                  </h3>
-                </div>
-                <svg
-                  className="w-5 h-5 text-accent transition-transform group-open:rotate-180"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M19 9l-7 7-7-7"
-                  />
-                </svg>
-              </summary>
-              <div className="px-6 pb-6">
-                <p className="text-muted-foreground mb-3">
-                  Coafuri simple și complexe, structuri, volum și expresivitate.
-                </p>
-              </div>
-            </details>
-          </div>
-          <div className="bg-gradient-to-br from-accent/10 to-accent/5 rounded-lg shadow-md border border-accent/20 backdrop-blur-sm">
-            <details className="group">
-              <summary className="flex items-center justify-between p-6 cursor-pointer hover:bg-accent/5 transition-colors h-[60px]">
-                <div className="flex items-center">
-                  <span className="text-2xl font-bold text-accent mr-3">
-                    07
-                  </span>
-                  <h3 className="text-lg font-semibold text-secondary-foreground font-sans">
-                    Concepte
-                  </h3>
-                </div>
-                <svg
-                  className="w-5 h-5 text-accent transition-transform group-open:rotate-180"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M19 9l-7 7-7-7"
-                  />
-                </svg>
-              </summary>
-              <div className="px-6 pb-6">
-                <p className="text-muted-foreground mb-3">
-                  Psihologie, simbolistică, estetică — fundația unei imagini
-                  reușite.
-                </p>
-              </div>
-            </details>
-          </div>
-        </div>
       </FadeContent>
     </div>
   );

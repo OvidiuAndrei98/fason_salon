@@ -14,7 +14,7 @@ const FaqSection = () => {
           INTREBARI FRECVENTE
         </h2>
       </FadeContent>
-      <div className="max-w-[800px] mx-auto px-4 space-y-6">
+      <div className="max-w-[1024px] mx-auto px-[32px] space-y-6">
         <AnimatedContent
           distance={150}
           direction="horizontal"
