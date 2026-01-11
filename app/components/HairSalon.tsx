@@ -1,6 +1,6 @@
 const HairSalon = () => {
   return (
-    <div className="flex flex-col justify-center items-center max-w-[1024px] mx-auto w-full px-[32px]">
+    <div className="flex flex-col justify-center items-center max-w-[1024px] mx-auto w-full px-4">
       <h2 className="font-heading text-3xl md:text-4xl py-[30px] md:py-[50px] font-extrabold tracking-wide bg-gradient-to-r from-slate-700 via-gray-500 to-slate-700 bg-clip-text text-transparent text-center">
         SALON FASON
       </h2>

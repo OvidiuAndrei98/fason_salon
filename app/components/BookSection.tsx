@@ -11,7 +11,7 @@ import MagicBento from "@/components/bento-grid/MagicBento";
 const BookSection = () => {
   const cart = useCart();
   return (
-    <div className="w-full flex flex-col items-center max-w-[1024px] mx-auto px-[48px] lg:px-[32px]">
+    <div className="w-full flex flex-col items-center max-w-[1024px] mx-auto">
       <FadeContent
         blur={true}
         duration={1000}
@@ -31,7 +31,7 @@ const BookSection = () => {
           initialOpacity={0}
           className="flex flex-col gap-6 "
         >
-          <div className="relative isolate overflow-hidden  px-6 py-12 sm:py-12 lg:overflow-visible lg:px-0">
+          <div className="relative isolate overflow-hidden  px-4 lg:overflow-visible">
             <div className="grid grid-cols-1 gap-x-0 gap-y-16 lg:mx-0 lg:max-w-none lg:grid-cols-2 lg:items-start lg:gap-y-10">
               <div className="lg:col-span-2 lg:col-start-1 lg:row-start-1 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8">
                 <div className="lg:pr-4">
@@ -51,7 +51,7 @@ const BookSection = () => {
                   </div>
                 </div>
               </div>
-              <div className="-mt-12 p-12 pr-0 lg:sticky lg:top-4 lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:overflow-hidden max-w-[400px] mx-auto md:max-w-full">
+              <div className="-mt-12 pt-12 lg:pl-12 lg:sticky lg:top-4 lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:overflow-hidden max-w-[400px] mx-auto md:max-w-full">
                 <div className="flex flex-col  bg-[#5f67ff24] rounded-3xl border border-[#5f67ff44] backdrop-blur-md shadow-lg ">
                   <AnimatedContent
                     distance={150}
@@ -407,17 +407,6 @@ const BookSection = () => {
           <div className="absolute inset-0 bg-[url('/splash_hero.png')] bg-cover bg-center bg-no-repeat opacity-10 rounded-lg md:h-[170%] -z-[1] md:-top-[70px]"></div>
           <MagicBento />
         </div>
-      </FadeContent>
-      <FadeContent
-        blur={true}
-        duration={1000}
-        easing="ease-out"
-        initialOpacity={0}
-        className=" w-full"
-      >
-        <h2 className="font-heading text-3xl md:text-4xl py-[30px] md:py-[50px] font-extrabold tracking-wide bg-gradient-to-r from-slate-700 via-gray-500 to-slate-700 bg-clip-text text-transparent text-center">
-          CAPITOLE
-        </h2>
       </FadeContent>
     </div>
   );

@@ -7,6 +7,7 @@ import Footer from "./components/navigation/Footer";
 import FloatingPopover from "@/components/ui/floating-popover";
 import { CartProvider } from "./core/cartContext";
 import { Toaster } from "@/components/ui/sonner";
+import MobileNav from "./components/navigation/MobileNav";
 
 const fontSans = Poppins({
   subsets: ["latin"],
@@ -39,7 +40,12 @@ export default function RootLayout({
         )}
       >
         <CartProvider>
-          <DesktopNav />
+          <div className="hidden md:block">
+            <DesktopNav />
+          </div>
+          <div className="block md:hidden">
+            <MobileNav />
+          </div>
           {children}
           <Footer />
           <FloatingPopover />

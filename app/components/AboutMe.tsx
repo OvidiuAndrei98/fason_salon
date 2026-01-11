@@ -15,7 +15,7 @@ const AboutMe = () => {
         </h2>
       </FadeContent>
 
-      <div className="w-full flex flex-col pr-[32px] md:flex-row gap-6 md:gap-4 lg:gap-10">
+      <div className="w-full flex flex-col pr-[8px] md:flex-row gap-6 md:gap-4 lg:gap-10">
         <FadeContent
           blur={true}
           duration={1000}
