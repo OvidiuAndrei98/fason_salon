@@ -1,5 +1,13 @@
 import AnimatedContent from "@/components/AnimatedContent";
 import FadeContent from "@/components/FadeContent";
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
+import { Play } from "lucide-react";
 
 const AboutMe = () => {
   return (
@@ -53,23 +61,56 @@ const AboutMe = () => {
           delay={0.1}
           className="w-full pl-2 md:[padding-right:clamp(0.5rem,calc((100vw-1024px)/2),50vw)]"
         >
-          <div className="aspect-3/4 md:aspect-auto flex flex-col gap-2 justify-end p-[32px] bg-[linear-gradient(180deg,rgba(204,204,204,0)_14%,rgba(0,0,0,0.8)_100%),url('/CRISTINA.webp')] h-[100%] object-contain bg-center bg-no-repeat bg-cover m-auto md:m-0 md:mb-0 rounded-4xl shadow-[0_0_22px_1px_rgba(0,_0,_0,_0.4)]">
-            <div className="flex gap-1 flex-nowrap">
-              <span className="bg-[#8484847e] text-foregroud p-[8px] text-[#ececec] rounded-full text-xs whitespace-nowrap">
-                HAIR DESIGN
-              </span>
-              <span className="bg-[#8484847e] text-foregroud p-[8px] text-[#ececec] rounded-full text-xs whitespace-nowrap">
-                HAIRSTYLIST
-              </span>
-              <span className="bg-[#8484847e] font-light text-foregroud p-[8px] text-[#ececec] rounded-full text-xs whitespace-nowrap">
-                COLORIST
-              </span>
-            </div>
-            <p className="text-white text-base">
-              Styling-ul e arta de a modela frumusețea interioară. Creez imagini
-              prin culoare și tunsoare.
-            </p>
-          </div>
+          <Dialog>
+            <DialogTrigger asChild>
+              {/* Transformăm imaginea într-un buton interactiv */}
+              <div className="group cursor-pointer relative aspect-3/4 md:aspect-auto flex flex-col gap-2 justify-end p-[32px] bg-[linear-gradient(180deg,rgba(204,204,204,0)_14%,rgba(0,0,0,0.8)_100%),url('/CRISTINA.webp')] h-[100%] object-contain bg-center bg-no-repeat bg-cover m-auto md:m-0 md:mb-0 rounded-4xl shadow-[0_0_22px_1px_rgba(0,_0,_0,_0.4)] overflow-hidden">
+                {/* Overlay de hover și Buton Play */}
+                <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors flex items-center justify-center">
+                  <div className="w-16 h-16 bg-white/20 backdrop-blur-md border border-white/30 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                    <Play className="text-white fill-white w-6 h-6 ml-1" />
+                  </div>
+                </div>
+
+                {/* Conținutul text de pe imagine (Tag-urile tale) */}
+                <div className="relative z-10">
+                  <div className="flex gap-1 flex-nowrap">
+                    <span className="bg-[#8484847e] text-[#ececec] p-[8px] rounded-full text-xs">
+                      HAIR DESIGN
+                    </span>
+                    <span className="bg-[#8484847e] text-[#ececec] p-[8px] rounded-full text-xs">
+                      HAIRSTYLIST
+                    </span>
+                    <span className="bg-[#8484847e] text-[#ececec] p-[8px] rounded-full text-xs">
+                      COLORIST
+                    </span>
+                  </div>
+                  <p className="text-white text-base mt-2">
+                    Apasă pentru a vedea povestea Christinei.
+                  </p>
+                </div>
+              </div>
+            </DialogTrigger>
+
+            <DialogContent className="max-w-[90%] lg:max-w-xl p-0 bg-black border-none overflow-hidden sm:rounded-2xl">
+              <DialogHeader className="sr-only">
+                <DialogTitle>Prezentare Christina Gramma</DialogTitle>
+              </DialogHeader>
+
+              {/* Container Video */}
+              <div className="w-full">
+                <video
+                  controls
+                  autoPlay
+                  className="w-full h-full"
+                  poster="/CRISTINA.webp"
+                >
+                  <source src="/video-prezentare.mp4" type="video/mp4" />
+                  Browserul tău nu suportă redarea video.
+                </video>
+              </div>
+            </DialogContent>
+          </Dialog>
         </AnimatedContent>
       </div>
     </div>
