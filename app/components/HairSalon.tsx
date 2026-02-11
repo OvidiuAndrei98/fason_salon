@@ -1,9 +1,13 @@
+import SalonShowcase from "@/components/salon-showcase/SalonShowcase";
+import SocialLinks from "@/components/socials/Socials";
+
 const HairSalon = () => {
   return (
-    <div className="flex flex-col justify-center items-center max-w-[1024px] mx-auto w-full px-4">
+    <div className="flex flex-col justify-center items-center max-w-[1024px] mx-auto w-full px-4 mb-20">
       <h2 className="font-heading text-3xl md:text-4xl py-[30px] md:py-[50px] font-extrabold tracking-wide bg-gradient-to-r from-slate-700 via-gray-500 to-slate-700 bg-clip-text text-transparent text-center">
         SALON FASON
       </h2>
+      <SalonShowcase />
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 w-full">
         <div className="flex flex-col w-full max-w-[500px]  ">
           <h3 className="font-heading text-2xl font-bold mb-2 text-accent/80">
@@ -22,6 +26,7 @@ const HairSalon = () => {
             profesionale adaptate nevoilor tale. Pentru programări ne poți
             contacta telefonic sau pe WhatsApp.
           </p>
+          <SocialLinks />
         </div>
         <div className="w-full flex justify-center">
           <iframe

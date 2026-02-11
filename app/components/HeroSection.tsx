@@ -49,7 +49,7 @@ const HeroSection = () => {
               <Image
                 src={HeroImage}
                 alt="Christina Gramma"
-                className="md:scale-[1.1]"
+                className="md:scale-[1.1] [mask-image:linear-gradient(to_bottom,black_60%,transparent_100%)] rounded-4xl shadow-[0_0_22px_1px_rgba(0,_0,_0,_0.4)]"
               />
             </AnimatedContent>
           </div>

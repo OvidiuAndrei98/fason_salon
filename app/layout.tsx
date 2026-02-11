@@ -37,7 +37,7 @@ export default function RootLayout({
         className={cn(
           "min-h-screen bg-background antialiased",
           fontSans.variable,
-          fontHeading.variable
+          fontHeading.variable,
         )}
       >
         <CartProvider>
@@ -51,7 +51,7 @@ export default function RootLayout({
           <Footer />
           <FloatingPopover />
         </CartProvider>
-        <Toaster />
+        <Toaster position="bottom-left" />
       </body>
     </html>
   );

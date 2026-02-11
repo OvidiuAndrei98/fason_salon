@@ -17,10 +17,10 @@ export const bookCheckout = async (priceId: string, cartItems: CartItem[]) => {
 
   if (!userId) {
     console.error(
-      "ID-ul utilizatorului este încă null după toate încercările. Nu se poate continua."
+      "ID-ul utilizatorului este încă null după toate încercările. Nu se poate continua.",
     );
     alert(
-      "Nu s-a putut obține un ID de utilizator. Te rugăm să încerci din nou."
+      "Nu s-a putut obține un ID de utilizator. Te rugăm să încerci din nou.",
     );
     return;
   }
@@ -31,7 +31,7 @@ export const bookCheckout = async (priceId: string, cartItems: CartItem[]) => {
       db,
       "customers",
       userId,
-      "checkout_sessions"
+      "checkout_sessions",
     );
 
     const lineItems = cartItems.map((item) => ({
@@ -86,7 +86,7 @@ export const bookCheckout = async (priceId: string, cartItems: CartItem[]) => {
   } catch (error) {
     console.error("Eroare generală la procesul de cumpărare:", error);
     alert(
-      "A apărut o eroare la procesul de cumpărare. Te rugăm să încerci din nou."
+      "A apărut o eroare la procesul de cumpărare. Te rugăm să încerci din nou.",
     );
   }
 };

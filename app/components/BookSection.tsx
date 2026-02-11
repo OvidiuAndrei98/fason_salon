@@ -8,6 +8,7 @@ import Image from "next/image";
 import { useCart } from "../core/cartContext";
 import { toast } from "sonner";
 import MagicBento from "@/components/bento-grid/MagicBento";
+import CourseCurriculum from "@/components/chapters-details/ChapterDetails";
 const BookSection = () => {
   const cart = useCart();
   return (
@@ -95,7 +96,7 @@ const BookSection = () => {
                       className="p-7 rounded self-center text-xl bg-foreground text-background hover:bg-accent active:bg-accent hover:text-secondary-background"
                       onClick={async () => {
                         const isInCart = cart?.items.find(
-                          (item) => item.id === "book_001"
+                          (item) => item.id === "book_001",
                         );
                         if (!isInCart) {
                           cart?.addItem({
@@ -170,6 +171,13 @@ const BookSection = () => {
                               Cum citești forma feței, direcția firelor, volumul
                               natural și cum creezi proporții corecte.
                             </p>
+                            <CourseCurriculum
+                              chapter={{
+                                title: "Fzionomiile Părului",
+                                fullContent:
+                                  "Cum citești forma feței, direcția firelor, volumul natural și cum creezi proporții corecte.",
+                              }}
+                            />
                           </div>
                         </details>
                       </div>
@@ -204,6 +212,13 @@ const BookSection = () => {
                               Întrebări simple, rezultate clare. Cum afli ce își
                               dorește cu adevărat clientul.
                             </p>
+                            <CourseCurriculum
+                              chapter={{
+                                title: "Comunicare",
+                                fullContent:
+                                  "Întrebări simple, rezultate clare. Cum afli ce își dorește cu adevărat clientul.",
+                              }}
+                            />
                           </div>
                         </details>
                       </div>
@@ -238,6 +253,13 @@ const BookSection = () => {
                               Proporții, linii, echilibru, detalii invizibile
                               care schimbă tot.
                             </p>
+                            <CourseCurriculum
+                              chapter={{
+                                title: "Arta si forma",
+                                fullContent:
+                                  "Proporții, linii, echilibru, detalii invizibile care schimbă tot.",
+                              }}
+                            />
                           </div>
                         </details>
                       </div>
@@ -272,6 +294,13 @@ const BookSection = () => {
                               Subtonuri, reflexe, culoare potrivită pentru
                               identitatea fiecărui om.
                             </p>
+                            <CourseCurriculum
+                              chapter={{
+                                title: "Arta si culoare",
+                                fullContent:
+                                  "Subtonuri, reflexe, culoare potrivită pentru identitatea fiecărui om.",
+                              }}
+                            />
                           </div>
                         </details>
                       </div>
@@ -306,6 +335,13 @@ const BookSection = () => {
                               Pași logici, tehnici sigure, cum protejezi firul
                               și eviți greșelile.
                             </p>
+                            <CourseCurriculum
+                              chapter={{
+                                title: "Decoloratul",
+                                fullContent:
+                                  "Pași logici, tehnici sigure, cum protejezi firul și eviți greșelile.",
+                              }}
+                            />
                           </div>
                         </details>
                       </div>
@@ -340,6 +376,13 @@ const BookSection = () => {
                               Coafuri simple și complexe, structuri, volum și
                               expresivitate.
                             </p>
+                            <CourseCurriculum
+                              chapter={{
+                                title: "Arta si modelarea parului",
+                                fullContent:
+                                  "Coafuri simple și complexe, structuri, volum și expresivitate.",
+                              }}
+                            />
                           </div>
                         </details>
                       </div>
@@ -374,6 +417,13 @@ const BookSection = () => {
                               Psihologie, simbolistică, estetică — fundația unei
                               imagini reușite.
                             </p>
+                            <CourseCurriculum
+                              chapter={{
+                                title: "Concepte",
+                                fullContent:
+                                  "Psihologie, simbolistică, estetică — fundația unei imagini reușite.",
+                              }}
+                            />
                           </div>
                         </details>
                       </div>
