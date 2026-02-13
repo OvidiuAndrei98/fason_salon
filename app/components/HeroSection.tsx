@@ -48,14 +48,12 @@ const HeroSection = () => {
               duration={1}
               className="mt-[-80px] w-full"
             >
-              {/* CONTAINERUL DE FLIP */}
               <div className="perspective-1000 w-full relative">
                 <motion.div
                   className="relative w-full preserve-3d"
                   animate={{ rotateY: isFlipped ? 180 : 0 }}
                   transition={{ duration: 0.8, ease: "easeInOut" }}
                 >
-                  {/* IMAGINEA 1 */}
                   <div className="backface-hidden w-full relative">
                     <Image
                       src={HeroImage}
@@ -65,7 +63,6 @@ const HeroSection = () => {
                     />
                   </div>
 
-                  {/* IMAGINEA 2 */}
                   <div className="backface-hidden rotate-y-180 absolute inset-0 w-full h-full">
                     <Image
                       src={HeroImage2}
@@ -77,8 +74,7 @@ const HeroSection = () => {
                 </motion.div>
               </div>
 
-              {/* INDICATORUL DEDESUBT */}
-              <div className="flex justify-center gap-3 mt-8 md:mt-12">
+              <div className="flex justify-center gap-3 mt-8 md:mt-12 mb-4">
                 <div
                   className={`h-1 rounded-full transition-all duration-700 ${!isFlipped ? "w-12 bg-white opacity-100" : "w-6 bg-white/20 opacity-50"}`}
                 />
