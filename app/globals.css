@@ -147,6 +147,10 @@
   }
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .text-fill-gradient {
   -webkit-background-clip: text; /* Crucial pentru majoritatea browserelor */
   background-clip: text;

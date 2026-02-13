@@ -41,17 +41,6 @@ export default function CourseCurriculum({ chapter }: ChapterDetailsProps) {
             {chapter.fullContent}
           </DialogDescription>
         </DialogHeader>
-
-        <div className="mt-6 flex justify-end">
-          <Button
-            onClick={() => {
-              /* Logica de scroll către Stripe section */
-            }}
-            className="bg-white text-black hover:bg-gray-200"
-          >
-            Vreau acest curs
-          </Button>
-        </div>
       </DialogContent>
     </Dialog>
   );

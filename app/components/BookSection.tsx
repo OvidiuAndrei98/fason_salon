@@ -12,7 +12,10 @@ import CourseCurriculum from "@/components/chapters-details/ChapterDetails";
 const BookSection = () => {
   const cart = useCart();
   return (
-    <div className="w-full flex flex-col items-center max-w-[1024px] mx-auto">
+    <div
+      className="w-full flex flex-col items-center max-w-[1024px] mx-auto"
+      id="course-section"
+    >
       <FadeContent
         blur={true}
         duration={1000}

@@ -5,6 +5,7 @@ import { StaggeredMenu } from "@/components/pill-nav/StaggeredNav";
 import { useEffect, useState } from "react";
 import Logo from "@/public/LOGO.svg";
 import Image from "next/image";
+import Link from "next/link";
 const DesktopNav = () => {
   const [isScrolled, setIsScrolled] = useState(false);
 
@@ -33,10 +34,18 @@ const DesktopNav = () => {
       <div className="max-w-[1024px] flex justify-between w-full mx-auto">
         <Image src={Logo} alt="Logos" width={120} height={60} />
         <ul className="flex justify-center gap-8 py-2 uppercase font-normal text-[16px] text-[#C7C7C7]">
-          <li className="hover:text-white">[ACASA]</li>
-          <li className="hover:text-white">[DESPRE]</li>
-          <li className="hover:text-white">[CURS]</li>
-          <li className="hover:text-white">[CONTACT]</li>
+          <li className="hover:text-white">
+            <Link href="/">ACASA</Link>
+          </li>
+          <li className="hover:text-white">
+            <Link href="#course-section">CURS</Link>
+          </li>
+          <li className="hover:text-white">
+            <Link href="#module-section">MODULE</Link>
+          </li>
+          <li className="hover:text-white">
+            <Link href="#contact-section">CONTACT</Link>
+          </li>
         </ul>
       </div>
     </header>
