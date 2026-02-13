@@ -1,11 +1,31 @@
-import { Mail, Phone, MapPin } from "lucide-react";
+"use client";
+
+import { Mail, Phone, MapPin, Loader2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import FadeContent from "@/components/FadeContent";
 import SocialLinks from "@/components/socials/Socials";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
+import { useState } from "react";
+import { sendEmail } from "@/service/resend/contactEmail";
+import { toast } from "sonner";
 
 const ContactSection = () => {
+  const [isPending, setIsPending] = useState(false);
+
+  async function handleSubmit(formData: FormData) {
+    setIsPending(true);
+    const result = await sendEmail(formData);
+    setIsPending(false);
+
+    if (result.success) {
+      toast.success("Mesajul a fost trimis cu succes!");
+      (document.getElementById("contact-form") as HTMLFormElement).reset();
+    } else {
+      toast.error("A apărut o eroare. Te rugăm să încerci din nou.");
+    }
+  }
+
   return (
     <section
       className="py-24 w-full bg-[var(--primary)] text-white overflow-hidden"
@@ -13,7 +33,6 @@ const ContactSection = () => {
     >
       <div className="max-w-[1400px] mx-auto px-6 md:px-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
-          {/* Partea Stângă: Info & Branding */}
           <FadeContent blur duration={1000} easing="ease-out">
             <div className="space-y-8">
               <div>
@@ -74,21 +93,25 @@ const ContactSection = () => {
             </div>
           </FadeContent>
 
-          {/* Partea Dreaptă: Formularul Glassmorphic */}
           <FadeContent blur duration={1200} delay={0.2}>
             <div className="relative p-8 md:p-12 rounded-[2rem] bg-white/[0.02] border border-white/10 backdrop-blur-xl">
-              {/* Gradient subtil în fundalul formularului */}
               <div className="absolute -top-20 -right-20 w-64 h-64 bg-primary/10 blur-[100px] rounded-full -z-10"></div>
 
-              <form className="space-y-6">
+              <form
+                id="contact-form"
+                action={handleSubmit}
+                className="space-y-6"
+              >
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div className="space-y-2">
                     <label className="text-xs uppercase tracking-widest text-gray-400 ml-1">
                       Nume
                     </label>
                     <Input
+                      name="name"
+                      required
                       placeholder="Numele tău"
-                      className="bg-white/5 border-white/10 focus:border-primary h-12 rounded-xl"
+                      className="bg-white/5 border-white/10 focus:border-primary h-12 rounded-xl text-white"
                     />
                   </div>
                   <div className="space-y-2">
@@ -96,9 +119,11 @@ const ContactSection = () => {
                       Email
                     </label>
                     <Input
+                      name="email"
                       type="email"
+                      required
                       placeholder="email@exemplu.com"
-                      className="bg-white/5 border-white/10 focus:border-primary h-12 rounded-xl"
+                      className="bg-white/5 border-white/10 focus:border-primary h-12 rounded-xl text-white"
                     />
                   </div>
                 </div>
@@ -108,8 +133,10 @@ const ContactSection = () => {
                     Subiect
                   </label>
                   <Input
+                    name="subject"
+                    required
                     placeholder="Programare / Curs / Info"
-                    className="bg-white/5 border-white/10 focus:border-primary h-12 rounded-xl"
+                    className="bg-white/5 border-white/10 focus:border-primary h-12 rounded-xl text-white"
                   />
                 </div>
 
@@ -118,13 +145,25 @@ const ContactSection = () => {
                     Mesaj
                   </label>
                   <Textarea
+                    name="message"
+                    required
                     placeholder="Cum te pot ajuta?"
-                    className="bg-white/5 border-white/10 focus:border-primary min-h-[150px] rounded-xl"
+                    className="bg-white/5 border-white/10 focus:border-primary min-h-[150px] rounded-xl text-white"
                   />
                 </div>
 
-                <Button className="w-full h-14 bg-white text-black hover:bg-primary hover:text-white transition-all duration-300 rounded-xl font-bold text-lg">
-                  Trimite Mesajul
+                <Button
+                  disabled={isPending}
+                  className="w-full h-14 bg-white text-black hover:bg-primary hover:text-white transition-all duration-300 rounded-xl font-bold text-lg"
+                >
+                  {isPending ? (
+                    <>
+                      <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                      Se trimite...
+                    </>
+                  ) : (
+                    "Trimite Mesajul"
+                  )}
                 </Button>
               </form>
             </div>

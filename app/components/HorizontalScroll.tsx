@@ -148,8 +148,11 @@ export default function HorizontalScroll() {
                           <Info size={20} />
                         </button>
                       </DialogTrigger>
-                      <DialogContent className="sm:max-w-[550px] rounded-[2.5rem] bg-white p-0 overflow-hidden border-none shadow-2xl">
-                        <div className="relative h-48 w-full">
+
+                      {/* MODIFICĂRILE AICI: am adăugat max-h, overflow-y-auto și am ajustat lățimea pe mobil */}
+                      <DialogContent className="w-[95vw] max-w-[550px] max-h-[90vh] overflow-y-auto rounded-[2rem] sm:rounded-[2.5rem] bg-white p-0 border-none shadow-2xl scrollbar-hide">
+                        {/* Imaginea de sus */}
+                        <div className="relative h-40 sm:h-48 w-full flex-shrink-0">
                           <Image
                             src={module.image}
                             fill
@@ -158,28 +161,32 @@ export default function HorizontalScroll() {
                           />
                           <div className="absolute inset-0 bg-gradient-to-t from-white via-white/20 to-transparent" />
                         </div>
-                        <div className="px-8 pb-10 pt-4">
+
+                        <div className="px-6 sm:px-8 pb-10 pt-4">
                           <DialogHeader>
-                            <span className="text-purple-600 font-bold text-xs uppercase tracking-widest mb-1">
+                            <span className="text-purple-600 font-bold text-[10px] sm:text-xs uppercase tracking-widest mb-1">
                               Programă Completă • Modul {module.num}
                             </span>
-                            <DialogTitle className="text-3xl font-black text-slate-900 leading-tight">
+                            <DialogTitle className="text-2xl sm:text-3xl font-black text-slate-900 leading-tight">
                               {module.title}
                             </DialogTitle>
                           </DialogHeader>
+
                           <div className="mt-6 space-y-6">
-                            <p className="text-slate-600 leading-relaxed italic border-l-4 border-purple-200 pl-4">
+                            <p className="text-slate-600 text-sm sm:text-base leading-relaxed italic border-l-4 border-purple-200 pl-4">
                               {module.fullDescription}
                             </p>
-                            <div className="grid grid-cols-1 gap-3 bg-slate-50 p-6 rounded-[2rem] border border-slate-100">
+
+                            <div className="grid grid-cols-1 gap-3 bg-slate-50 p-5 sm:p-6 rounded-[1.5rem] sm:rounded-[2rem] border border-slate-100">
                               <h4 className="font-bold text-slate-900 flex items-center gap-2 mb-2">
-                                <Check size={18} className="text-green-500" />{" "}
+                                <Check size={18} className="text-green-500" />
                                 Lecții incluse:
                               </h4>
+
                               {module.features.map((f, i) => (
                                 <div
                                   key={i}
-                                  className="flex gap-3 text-sm text-slate-600 border-b border-slate-200/40 pb-2 last:border-0"
+                                  className="flex gap-3 text-xs sm:text-sm text-slate-600 border-b border-slate-200/40 pb-2 last:border-0"
                                 >
                                   <span className="font-bold text-purple-400">
                                     {i + 1}.
