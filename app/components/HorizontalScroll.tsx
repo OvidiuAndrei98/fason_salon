@@ -1,10 +1,8 @@
 "use client";
 
-import React from "react";
 import Image from "next/image";
-import { Info, ShoppingBag, Check } from "lucide-react";
+import { Info, Check } from "lucide-react";
 import { useCart } from "../core/cartContext";
-import { toast } from "sonner";
 import {
   Dialog,
   DialogContent,

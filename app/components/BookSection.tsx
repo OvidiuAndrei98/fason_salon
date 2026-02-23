@@ -3,8 +3,6 @@
 import AnimatedContent from "@/components/AnimatedContent";
 import FadeContent from "@/components/FadeContent";
 import { Button } from "@/components/ui/button";
-import Carte from "@/public/carte.webp";
-import Image from "next/image";
 import { useCart } from "../core/cartContext";
 import { toast } from "sonner";
 import MagicBento from "@/components/bento-grid/MagicBento";
