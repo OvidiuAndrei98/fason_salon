@@ -28,12 +28,11 @@ const FaqSection = () => {
           delay={0.1}
         >
           <h3 className="font-heading text-2xl font-bold mb-2 text-accent/80">
-            Care sunt serviciile oferite în salon?
+            Cum primesc acces la curs?
           </h3>
           <p>
-            Oferim o gamă largă de servicii de hair styling, inclusiv tunsori,
-            colorare, balayage, tratamente de îngrijire a părului și coafuri
-            pentru ocazii speciale.
+            După achiziție, primești automat pe email linkul de acces. Simplu,
+            rapid, fără complicații.
           </p>
         </AnimatedContent>
         <AnimatedContent
@@ -49,12 +48,13 @@ const FaqSection = () => {
           delay={0.1}
         >
           <h3 className="font-heading text-2xl font-bold mb-2 text-accent/80">
-            Cum pot face o programare?
+            De ce este cursul online?
           </h3>
           <p>
-            Puteți face o programare prin telefon, email sau folosind formularul
-            de contact de pe site-ul nostru. Vă recomandăm să rezervați din timp
-            pentru a vă asigura că obțineți data și ora dorită.
+            Pentru că timpul tău este prețios. Înveți oriunde și oricând, în
+            ritmul tău, fără drumuri și fără program fix. Poți pune pauză, relua
+            și revedea lecțiile de câte ori ai nevoie. Ai control total asupra
+            procesului tău de învățare.
           </p>
         </AnimatedContent>
         <AnimatedContent
@@ -70,12 +70,12 @@ const FaqSection = () => {
           delay={0.1}
         >
           <h3 className="font-heading text-2xl font-bold mb-2 text-accent/80">
-            Ce produse folosiți în salon?
+            Chiar pot învăța normal dintr-un curs online?
           </h3>
           <p>
-            Folosim doar produse de înaltă calitate, de la branduri renumite,
-            care sunt blânde cu părul și scalpul, asigurând rezultate excelente
-            și sănătate pe termen lung pentru părul dumneavoastră.
+            Da. Dacă te implici, reușești. Poți reveni la informație ori de câte
+            ori simți că ai nevoie. Repetiția + practică = rezultate. Totul
+            depinde de cât aplici ceea ce înveți
           </p>
         </AnimatedContent>
         <AnimatedContent
@@ -91,12 +91,77 @@ const FaqSection = () => {
           delay={0.1}
         >
           <h3 className="font-heading text-2xl font-bold mb-2 text-accent/80">
-            Oferiți consultanță pentru stilul de păr?
+            Cât de repede pot să avansez?
           </h3>
           <p>
-            Da, oferim consultanță personalizată pentru a vă ajuta să alegeți
-            stilul și culoarea care se potrivesc cel mai bine cu personalitatea
-            și stilul dumneavoastră de viață.
+            Nu există un timp standard. Fiecare persoană asimilează diferit.
+            Progresul depinde de cât exersezi și cât aplici. Diferența dintre 5
+            coafuri și 50 de coafuri este uriașă. Practica nu doar ajută.
+            Practica transformă.
+          </p>
+        </AnimatedContent>
+        <AnimatedContent
+          distance={150}
+          direction="horizontal"
+          reverse={true}
+          duration={1.6}
+          ease="power3.out"
+          initialOpacity={0.2}
+          animateOpacity
+          scale={1.1}
+          threshold={0.2}
+          delay={0.1}
+        >
+          <h3 className="font-heading text-2xl font-bold mb-2 text-accent/80">
+            Și dacă nu îmi iese din prima?
+          </h3>
+          <p>
+            Perfect. Nici nu trebuie. Hairstyling-ul nu este magie, este
+            practică. Prima coafură este începutul. A zecea arată mai bine. A
+            cincizecea? Alt nivel. Revii, corectezi, repeți. Nu „nu îți iese”.
+            Încă înveți.
+          </p>
+        </AnimatedContent>
+        <AnimatedContent
+          distance={150}
+          direction="horizontal"
+          reverse={true}
+          duration={1.6}
+          ease="power3.out"
+          initialOpacity={0.2}
+          animateOpacity
+          scale={1.1}
+          threshold={0.2}
+          delay={0.1}
+        >
+          <h3 className="font-heading text-2xl font-bold mb-2 text-accent/80">
+            Trebuie să am talent?
+          </h3>
+          <p>
+            Nu. Trebuie să ai dorință. Talentul ajută, dar tehnica se învață.
+            Majoritatea hairstyliștilor buni nu s-au născut „cu mâna formată” —
+            au exersat-o. Constanța bate talentul. De fiecare dată.
+          </p>
+        </AnimatedContent>
+        <AnimatedContent
+          distance={150}
+          direction="horizontal"
+          reverse={true}
+          duration={1.6}
+          ease="power3.out"
+          initialOpacity={0.2}
+          animateOpacity
+          scale={1.1}
+          threshold={0.2}
+          delay={0.1}
+        >
+          <h3 className="font-heading text-2xl font-bold mb-2 text-accent/80">
+            Dacă nu am cliente încă?
+          </h3>
+          <p>
+            Este momentul perfect să începi. Exersezi pe modele, faci poze, îți
+            construiești portofoliul. Clientele apar când văd rezultate. Iar
+            rezultatele apar când începi.
           </p>
         </AnimatedContent>
       </div>

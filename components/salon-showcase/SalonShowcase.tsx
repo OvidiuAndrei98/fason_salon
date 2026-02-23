@@ -26,7 +26,7 @@ const photos = [
 const SalonShowcase = () => {
   return (
     <section className="pb-20 w-full">
-      <div className="max-w-[1600px] mx-auto px-4 md:px-10">
+      <div className="max-w-[1600px] mx-auto">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4 auto-rows-[250px] md:auto-rows-[300px]">
           {photos.map((photo, index) => (
             <div

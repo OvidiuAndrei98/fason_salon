@@ -22,7 +22,7 @@ const MODULES_DATA = [
     title: "Arta și forma părului",
     subtitle: "De la anatomia părului până la instrumentele de bază.",
     image: "/cap-1-image.jpeg",
-    price: 60,
+
     features: [
       "Arta și forma părului Step by Step.",
       "Cele 3 forme în tunsoare Step by Step.",
@@ -40,7 +40,6 @@ const MODULES_DATA = [
     title: "Arta și colorarea părului",
     subtitle: "Tehnici avansate de colorare și nuanțare profesională.",
     image: "/cap-2-image.jpeg",
-    price: 60,
     features: [
       "Introducere, tehnici de colorare.",
       "Prima vopsire și tehnici de nuanțare.",
@@ -59,7 +58,6 @@ const MODULES_DATA = [
     title: "Arta și modelarea părului",
     subtitle: "Tehnici profesionale de styling și coafare avansată.",
     image: "/cap-3-image.jpeg",
-    price: 60,
     features: [
       "Introducere în lumea creației.",
       "Coafatul cu peria plată Step by Step.",
@@ -128,18 +126,6 @@ export default function HorizontalScroll() {
 
                 {/* Footer cu Acțiuni */}
                 <div className="mt-auto pt-6 border-t border-slate-50 flex items-center justify-between">
-                  <div className="flex flex-col">
-                    <span className="text-[10px] font-bold text-slate-400 uppercase tracking-wider">
-                      Preț
-                    </span>
-                    <span className="text-2xl font-black text-slate-900">
-                      {module.price}{" "}
-                      <span className="text-sm font-medium text-slate-500">
-                        RON
-                      </span>
-                    </span>
-                  </div>
-
                   <div className="flex gap-2">
                     {/* MODAL DETALII */}
                     <Dialog>
@@ -199,33 +185,6 @@ export default function HorizontalScroll() {
                         </div>
                       </DialogContent>
                     </Dialog>
-
-                    {/* BUTON CUMPĂRĂ */}
-                    <button
-                      onClick={() => {
-                        const isInCart = cart?.items.find(
-                          (item) => item.id === module.id,
-                        );
-                        if (!isInCart) {
-                          cart?.addItem({
-                            id: module.id,
-                            name: `Modul ${module.num}: ${module.title}`,
-                            price: module.price,
-                            priceId: module.priceId,
-                            quantity: 1,
-                          });
-                          toast.success("Adăugat în coș cu succes!");
-                        } else {
-                          toast.info("Acest modul se află deja în coș.");
-                        }
-                      }}
-                      className="bg-slate-900 hover:bg-purple-600 text-white p-3 px-5 rounded-2xl flex items-center gap-2 transition-all active:scale-95 shadow-xl shadow-slate-200 cursor-pointer"
-                    >
-                      <ShoppingBag size={20} />
-                      <span className="font-bold text-sm tracking-wide">
-                        CUMPĂRĂ
-                      </span>
-                    </button>
                   </div>
                 </div>
               </div>

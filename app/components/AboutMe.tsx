@@ -23,31 +23,7 @@ const AboutMe = () => {
         </h2>
       </FadeContent>
 
-      <div className="w-full flex flex-col pr-[8px] md:flex-row gap-6 md:gap-4 lg:gap-10">
-        <FadeContent
-          blur={true}
-          duration={1000}
-          easing="ease-out"
-          initialOpacity={0}
-          className="bg-accent/15 p-4 md:p-0 flex flex-col gap-4 items-center md:items-start md:[padding-left:clamp(32px,calc((100vw-1024px)/2),50vw)] md:pr-[50px] md:py-[50px] text-xl rounded-tr-4xl rounded-br-4xl"
-        >
-          <h2 className="text-secondary-foreground font-heading text-3xl font-extrabold tracking-wide">
-            CHRISTINA GRAMMA
-          </h2>
-          <p className="pb-2 text-base w-full text-center md:text-start">
-            Cu o experiență de peste 30 de ani în domeniul hair styling-ului,
-            sunt dedicată să creez look-uri care să reflecte personalitatea
-            fiecărei persoane.
-          </p>
-          <p className="w-full text-base text-center md:text-start">
-            Filosofia mea se bazează pe îngrijirea și sănătatea părului,
-            folosind produse premium și tehnici inovatoare pentru a obține cele
-            mai bune rezultate. Fiecare vizită în salonul meu este o experiență
-            personalizată, unde ascult cu atenție dorințele tale și le transform
-            în realitate.
-          </p>
-        </FadeContent>
-
+      <div className="w-full flex flex-col">
         <AnimatedContent
           distance={150}
           direction="horizontal"
@@ -59,11 +35,10 @@ const AboutMe = () => {
           scale={1.1}
           threshold={0.2}
           delay={0.1}
-          className="w-full pl-2 md:[padding-right:clamp(0.5rem,calc((100vw-1024px)/2),50vw)]"
+          className="w-full max-w-[1024px] mx-auto px-4 md:px-0 md:h-[500px] relative pl-[8px] pr-[8px] md:pl-4 md:pr-4"
         >
           <Dialog>
             <DialogTrigger asChild>
-              {/* Transformăm imaginea într-un buton interactiv */}
               <div className="group cursor-pointer relative aspect-3/4 md:aspect-auto flex flex-col gap-2 justify-end p-[32px] bg-[linear-gradient(180deg,rgba(204,204,204,0)_14%,rgba(0,0,0,0.8)_100%),url('/CRISTINA.webp')] h-[100%] object-contain bg-center bg-no-repeat bg-cover m-auto md:m-0 md:mb-0 rounded-4xl shadow-[0_0_22px_1px_rgba(0,_0,_0,_0.4)] overflow-hidden">
                 {/* Overlay de hover și Buton Play */}
                 <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors flex items-center justify-center">
@@ -72,7 +47,7 @@ const AboutMe = () => {
                   </div>
                 </div>
 
-                {/* Conținutul text de pe imagine (Tag-urile tale) */}
+                {/* Conținutul text de pe imagine */}
                 <div className="relative z-10">
                   <div className="flex gap-1 flex-nowrap">
                     <span className="bg-[#8484847e] text-[#ececec] p-[8px] rounded-full text-xs">
@@ -98,14 +73,17 @@ const AboutMe = () => {
               </DialogHeader>
 
               {/* Container Video */}
-              <div className="w-full">
+              <div className="relative w-full flex items-center justify-center bg-black max-h-[85vh]">
                 <video
                   controls
                   autoPlay
-                  className="w-full h-full"
+                  className="max-w-full max-h-[85vh] block mx-auto shadow-2xl"
                   poster="/CRISTINA.webp"
                 >
-                  <source src="/video-prezentare.mp4" type="video/mp4" />
+                  <source
+                    src="https://firebasestorage.googleapis.com/v0/b/salon-fason.firebasestorage.app/o/public%2Fabout-me-video.webm?alt=media&token=b4ee6586-352d-4bf7-bff4-eade61ff1ac0"
+                    type="video/webm"
+                  />
                   Browserul tău nu suportă redarea video.
                 </video>
               </div>

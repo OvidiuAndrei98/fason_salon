@@ -16,7 +16,7 @@ const HeroSection = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setIsFlipped((prev) => !prev);
-    }, 5000);
+    }, 3000);
     return () => clearInterval(interval);
   }, []);
 
@@ -29,8 +29,6 @@ const HeroSection = () => {
       />
 
       <div className="relative flex flex-col p-[8px_8px_0_8px] hero-section max-w-[1024px] mx-auto pt-[50px]">
-        <div className="absolute bottom-0 right-[-50px] w-[200px] h-[400px] bg-accent opacity-50 z-0 pointer-events-none transform skew-y-12" />
-
         <div className="flex flex-col">
           <h1 className="hero-title text-fill-gradient bg-[linear-gradient(180deg,rgba(249,249,249,1)_0%,rgba(40,40,40,1)_100%)] text-transparent font-heading pt-[16px] font-bold text-[clamp(2rem,_15vw,_158px)] uppercase leading-none tracking-wide m-0 p-0 text-nowrap text-center">
             CHRISTINA GRAMMA
@@ -87,14 +85,9 @@ const HeroSection = () => {
 
           <FadeContent className="flex flex-col gap-4 mb-[32px] md:col-span-5 z-30">
             <h1 className="text-white text-4xl lg:text-5xl md:text-start text-center">
-              Curs Hairdesign <br /> Masterclass: Tehnică, Forma, Estetică și
-              Viziune
+              Curs: tunsoare, culoare, styling, consultanță, estetică, viziune,
+              creativitate, arta și istoria coafurii.
             </h1>
-            <span className="text-center font-sans text-md md:text-start text-base text-white leading-relaxed">
-              Pentru mine, părul nu este doar tehnică. Este o formă de
-              comunicare modul în care un om spune cine este fără să rostească
-              un cuvânt.
-            </span>
             <Button className="p-8 rounded self-center md:self-start text-xl bg-white text-black hover:bg-accent active:bg-accent hover:text-secondary-background">
               Vezi Detalii
             </Button>
